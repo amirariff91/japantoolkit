@@ -7,7 +7,13 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 
-const PASS_PRICE = 50000;
+const PASS_PRICES = {
+  "7-day": 50000,
+  "14-day": 80000,
+  "21-day": 100000,
+} as const;
+
+type PassType = keyof typeof PASS_PRICES;
 
 const routeOptions = [
   { id: "tokyo-kyoto", label: "Tokyo to Kyoto", cost: 14000 },
@@ -23,6 +29,7 @@ export function RailPassCalculator() {
   const [travelers, setTravelers] = useState(1);
   const [extraTripCount, setExtraTripCount] = useState(0);
   const [extraTripCost, setExtraTripCost] = useState(12000);
+  const [passType, setPassType] = useState<PassType>("7-day");
 
   const totals = useMemo(() => {
     const presetTotal = selectedRoutes.reduce((sum, routeId) => {
@@ -34,7 +41,7 @@ export function RailPassCalculator() {
     const extraCost = extraTripCount * extraTripCost;
     const costPerTraveler = presetTotal + extraCost;
     const totalCost = costPerTraveler * travelers;
-    const passTotal = PASS_PRICE * travelers;
+    const passTotal = PASS_PRICES[passType] * travelers;
 
     return {
       totalTrips,
@@ -44,7 +51,7 @@ export function RailPassCalculator() {
       isWorthIt: totalCost > passTotal,
       savings: Math.abs(totalCost - passTotal),
     };
-  }, [extraTripCount, extraTripCost, selectedRoutes, travelers]);
+  }, [extraTripCount, extraTripCost, passType, selectedRoutes, travelers]);
 
   const toggleRoute = (routeId: string) => {
     setSelectedRoutes((current) =>
@@ -80,6 +87,33 @@ export function RailPassCalculator() {
                       className="h-4 w-4 rounded border-stone-300 text-amber-700 focus:ring-amber-600"
                     />
                   </div>
+                </label>
+              ))}
+            </div>
+          </div>
+
+          <div className="space-y-3">
+            <Label>Pass type</Label>
+            <div className="flex gap-3">
+              {(Object.keys(PASS_PRICES) as PassType[]).map((type) => (
+                <label
+                  key={type}
+                  className={`flex cursor-pointer flex-col rounded-2xl border px-4 py-3 text-sm ${
+                    passType === type
+                      ? "border-amber-700 bg-amber-50 text-amber-900"
+                      : "border-stone-200 bg-stone-50 text-stone-700"
+                  }`}
+                >
+                  <input
+                    type="radio"
+                    name="pass-type"
+                    value={type}
+                    checked={passType === type}
+                    onChange={() => setPassType(type)}
+                    className="sr-only"
+                  />
+                  <span className="font-medium">{type}</span>
+                  <span className="text-xs">JPY {PASS_PRICES[type].toLocaleString()}</span>
                 </label>
               ))}
             </div>
@@ -149,8 +183,8 @@ export function RailPassCalculator() {
           </div>
           <p className="text-sm leading-6 text-stone-300">
             {totals.isWorthIt
-              ? "Your selected routes cost more than the pass. If these rides happen inside one 7-day window, the nationwide pass clears the simple break-even test."
-              : "Your selected routes stay under the pass cost. Unless you need flexibility more than savings, separate tickets are likely the better buy."}
+              ? `Your selected routes cost more than the ${passType} pass. If these rides happen inside the pass window, the nationwide pass clears the simple break-even test.`
+              : `Your selected routes stay under the ${passType} pass cost. Unless you need flexibility more than savings, separate tickets are likely the better buy.`}
           </p>
           <p className="text-xs leading-5 text-stone-400">
             Logic used: if total shinkansen cost is greater than the pass price, the pass is marked as worth it.

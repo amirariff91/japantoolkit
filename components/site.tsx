@@ -1,7 +1,24 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 
-import type { Itinerary, ToolSummary } from "@/lib/site-data";
+type ToolSummary = {
+  href: string;
+  title: string;
+  description: string;
+  eyebrow: string;
+  featured?: boolean;
+  status?: "live" | "coming-soon";
+};
+
+type Itinerary = {
+  slug: string;
+  title: string;
+  intro: string;
+  duration: string;
+  type: string;
+  cities: string;
+  cardDescription: string;
+};
 
 type ContainerProps = {
   children: ReactNode;

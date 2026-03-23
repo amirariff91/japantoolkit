@@ -140,9 +140,6 @@ export default function HomePage() {
             </Card>
           ))}
         </div>
-        <div className="rounded-[1.5rem] border border-dashed border-stone-300 bg-stone-50 px-6 py-5 text-sm text-stone-700">
-          Available slugs: {itinerarySlugs.join(", ")}
-        </div>
       </section>
 
       <section className="rounded-[2rem] border border-stone-200 bg-stone-900 px-6 py-10 text-stone-50 md:px-10">
