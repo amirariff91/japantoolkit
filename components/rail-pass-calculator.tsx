@@ -1,0 +1,162 @@
+"use client";
+
+import { useMemo, useState } from "react";
+
+import { Badge } from "@/components/ui/badge";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+
+const PASS_PRICE = 50000;
+
+const routeOptions = [
+  { id: "tokyo-kyoto", label: "Tokyo to Kyoto", cost: 14000 },
+  { id: "kyoto-hiroshima", label: "Kyoto to Hiroshima", cost: 11000 },
+  { id: "tokyo-osaka", label: "Tokyo to Shin-Osaka", cost: 14500 },
+  { id: "tokyo-sendai", label: "Tokyo to Sendai", cost: 11000 },
+  { id: "osaka-kanazawa", label: "Shin-Osaka to Kanazawa", cost: 8000 },
+  { id: "tokyo-hakodate", label: "Tokyo to Hakodate", cost: 24000 },
+];
+
+export function RailPassCalculator() {
+  const [selectedRoutes, setSelectedRoutes] = useState<string[]>(["tokyo-kyoto", "kyoto-hiroshima"]);
+  const [travelers, setTravelers] = useState(1);
+  const [extraTripCount, setExtraTripCount] = useState(0);
+  const [extraTripCost, setExtraTripCost] = useState(12000);
+
+  const totals = useMemo(() => {
+    const presetTotal = selectedRoutes.reduce((sum, routeId) => {
+      const route = routeOptions.find((option) => option.id === routeId);
+      return sum + (route?.cost ?? 0);
+    }, 0);
+
+    const totalTrips = selectedRoutes.length + extraTripCount;
+    const extraCost = extraTripCount * extraTripCost;
+    const costPerTraveler = presetTotal + extraCost;
+    const totalCost = costPerTraveler * travelers;
+    const passTotal = PASS_PRICE * travelers;
+
+    return {
+      totalTrips,
+      costPerTraveler,
+      totalCost,
+      passTotal,
+      isWorthIt: totalCost > passTotal,
+      savings: Math.abs(totalCost - passTotal),
+    };
+  }, [extraTripCount, extraTripCost, selectedRoutes, travelers]);
+
+  const toggleRoute = (routeId: string) => {
+    setSelectedRoutes((current) =>
+      current.includes(routeId) ? current.filter((id) => id !== routeId) : [...current, routeId],
+    );
+  };
+
+  return (
+    <div className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
+      <Card className="border-stone-200 bg-white/85">
+        <CardHeader>
+          <CardTitle>Trip inputs</CardTitle>
+        </CardHeader>
+        <CardContent className="space-y-6">
+          <div className="space-y-3">
+            <Label>Select your main shinkansen routes</Label>
+            <div className="grid gap-3">
+              {routeOptions.map((route) => (
+                <label
+                  key={route.id}
+                  className="flex cursor-pointer items-start justify-between gap-4 rounded-2xl border border-stone-200 bg-stone-50 px-4 py-3 text-sm text-stone-700"
+                >
+                  <div>
+                    <p className="font-medium text-stone-900">{route.label}</p>
+                    <p className="text-stone-600">Approx. one-way reserved seat fare</p>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <span className="font-medium">JPY {route.cost.toLocaleString()}</span>
+                    <input
+                      type="checkbox"
+                      checked={selectedRoutes.includes(route.id)}
+                      onChange={() => toggleRoute(route.id)}
+                      className="h-4 w-4 rounded border-stone-300 text-amber-700 focus:ring-amber-600"
+                    />
+                  </div>
+                </label>
+              ))}
+            </div>
+          </div>
+
+          <div className="grid gap-4 sm:grid-cols-3">
+            <div className="space-y-2">
+              <Label htmlFor="travelers">Travelers</Label>
+              <Input
+                id="travelers"
+                min={1}
+                type="number"
+                value={travelers}
+                onChange={(event) => setTravelers(Math.max(1, Number(event.target.value) || 1))}
+              />
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="extra-trip-count">Extra trips</Label>
+              <Input
+                id="extra-trip-count"
+                min={0}
+                type="number"
+                value={extraTripCount}
+                onChange={(event) => setExtraTripCount(Math.max(0, Number(event.target.value) || 0))}
+              />
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="extra-trip-cost">Cost per extra trip</Label>
+              <Input
+                id="extra-trip-cost"
+                min={0}
+                step={500}
+                type="number"
+                value={extraTripCost}
+                onChange={(event) => setExtraTripCost(Math.max(0, Number(event.target.value) || 0))}
+              />
+            </div>
+          </div>
+        </CardContent>
+      </Card>
+
+      <Card className="border-stone-200 bg-stone-900 text-stone-50">
+        <CardHeader>
+          <CardTitle>Recommendation</CardTitle>
+        </CardHeader>
+        <CardContent className="space-y-5">
+          <Badge className={totals.isWorthIt ? "w-fit bg-emerald-500 text-white" : "w-fit bg-rose-500 text-white"}>
+            {totals.isWorthIt ? "Worth it" : "Buy individual tickets"}
+          </Badge>
+          <div className="grid gap-4 sm:grid-cols-2">
+            <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
+              <p className="text-sm text-stone-300">Trips counted</p>
+              <p className="mt-2 text-3xl font-semibold">{totals.totalTrips}</p>
+            </div>
+            <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
+              <p className="text-sm text-stone-300">Shinkansen total</p>
+              <p className="mt-2 text-3xl font-semibold">JPY {totals.totalCost.toLocaleString()}</p>
+            </div>
+            <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
+              <p className="text-sm text-stone-300">JR Pass total</p>
+              <p className="mt-2 text-3xl font-semibold">JPY {totals.passTotal.toLocaleString()}</p>
+            </div>
+            <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
+              <p className="text-sm text-stone-300">Difference</p>
+              <p className="mt-2 text-3xl font-semibold">JPY {totals.savings.toLocaleString()}</p>
+            </div>
+          </div>
+          <p className="text-sm leading-6 text-stone-300">
+            {totals.isWorthIt
+              ? "Your selected routes cost more than the pass. If these rides happen inside one 7-day window, the nationwide pass clears the simple break-even test."
+              : "Your selected routes stay under the pass cost. Unless you need flexibility more than savings, separate tickets are likely the better buy."}
+          </p>
+          <p className="text-xs leading-5 text-stone-400">
+            Logic used: if total shinkansen cost is greater than the pass price, the pass is marked as worth it.
+          </p>
+        </CardContent>
+      </Card>
+    </div>
+  );
+}
