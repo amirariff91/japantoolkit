@@ -189,6 +189,34 @@ export function RailPassCalculator() {
           <p className="text-xs leading-5 text-stone-400">
             Logic used: if total shinkansen cost is greater than the pass price, the pass is marked as worth it.
           </p>
+
+          {/* TODO: Replace AFFILIATE_ID_HERE with your JRPass affiliate ID from jrpass.com/affiliates */}
+          {totals.isWorthIt ? (
+            <div className="space-y-2 pt-1">
+              <a
+                href="https://www.jrpass.com/?ref=AFFILIATE_ID_HERE"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full rounded-2xl bg-amber-500 px-4 py-3 text-center text-sm font-semibold text-stone-950 hover:bg-amber-400"
+              >
+                Buy JR Pass →
+              </a>
+              <p className="text-center text-xs text-stone-400">We may earn a commission at no extra cost to you.</p>
+            </div>
+          ) : (
+            <p className="pt-1 text-xs leading-5 text-stone-400">
+              Based on your routes, individual tickets save money. You can still compare pass options at{" "}
+              <a
+                href="https://www.jrpass.com/?ref=AFFILIATE_ID_HERE"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:text-stone-300"
+              >
+                JRPass.com
+              </a>
+              .
+            </p>
+          )}
         </CardContent>
       </Card>
     </div>

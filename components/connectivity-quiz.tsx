@@ -76,6 +76,35 @@ export function ConnectivityQuiz() {
           <Badge className="bg-amber-500 text-stone-950 hover:bg-amber-500">{result.label}</Badge>
           <p className="mt-3 text-sm leading-6 text-stone-200">{result.summary}</p>
         </div>
+
+        {/* TODO: Replace AFFILIATE_ID_HERE with your Airalo affiliate ID from partners.airalo.com and Japan Wireless affiliate ID */}
+        <div className="space-y-2">
+          {result.label === "eSIM" ? (
+            <>
+              <a
+                href="https://www.airalo.com/japan-esim?ref=AFFILIATE_ID_HERE"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full rounded-2xl bg-amber-500 px-4 py-3 text-center text-sm font-semibold text-stone-950 hover:bg-amber-400"
+              >
+                Get Japan eSIM on Airalo →
+              </a>
+              <p className="text-center text-xs text-stone-400">From ~$6 for 1GB · instant activation · no physical SIM needed</p>
+            </>
+          ) : (
+            <>
+              <a
+                href="https://www.japan-wireless.com/?ref=AFFILIATE_ID_HERE"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full rounded-2xl border border-stone-500 px-4 py-3 text-center text-sm font-semibold text-stone-200 hover:border-stone-300 hover:text-white"
+              >
+                Compare Pocket Wi-Fi rentals →
+              </a>
+            </>
+          )}
+          <p className="text-center text-xs text-stone-400">We may earn a commission at no extra cost to you.</p>
+        </div>
       </CardContent>
     </Card>
   );

@@ -94,6 +94,54 @@ export default function ItineraryDetailPage({ params }: ItineraryPageProps) {
           </CardContent>
         </Card>
       </div>
+
+      {/* TODO: Replace AFFILIATE_ID_HERE with your Klook affiliate ID from affiliate.klook.com */}
+      <div className="space-y-4">
+        <div>
+          <p className="text-xs font-medium uppercase tracking-[0.18em] text-stone-400">Affiliate</p>
+          <h2 className="mt-1 text-2xl font-semibold text-stone-900">Recommended experiences</h2>
+        </div>
+        <div className="grid gap-4 sm:grid-cols-3">
+          <div className="rounded-2xl border border-stone-200 bg-white/85 p-4 space-y-3">
+            <p className="font-semibold text-stone-900">Tokyo Skytree Observation Deck</p>
+            <p className="text-sm leading-6 text-stone-600">Skip the queue with a reserved entry ticket to Tokyo&apos;s iconic 634 m tower.</p>
+            <a
+              href="https://www.klook.com/activity/1393-tokyo-skytree/?aid=AFFILIATE_ID_HERE"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block rounded-xl border border-stone-300 px-3 py-2 text-xs font-medium text-stone-700 hover:border-stone-500 hover:text-stone-900"
+            >
+              Book on Klook →
+            </a>
+          </div>
+          <div className="rounded-2xl border border-stone-200 bg-white/85 p-4 space-y-3">
+            <p className="font-semibold text-stone-900">Fushimi Inari Early Morning Tour</p>
+            <p className="text-sm leading-6 text-stone-600">Walk the thousand torii gates before the crowds arrive with a small-group guided tour.</p>
+
+            <a
+              href="https://www.klook.com/activity/52231-fushimi-inari-early-morning-tour-kyoto/?aid=AFFILIATE_ID_HERE"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block rounded-xl border border-stone-300 px-3 py-2 text-xs font-medium text-stone-700 hover:border-stone-500 hover:text-stone-900"
+            >
+              Book on Klook →
+            </a>
+          </div>
+          <div className="rounded-2xl border border-stone-200 bg-white/85 p-4 space-y-3">
+            <p className="font-semibold text-stone-900">TeamLab Planets Tokyo</p>
+            <p className="text-sm leading-6 text-stone-600">Immersive digital art installation in Toyosu — timed entry tickets sell out fast.</p>
+            <a
+              href="https://www.klook.com/activity/56448-teamlab-planets-tokyo/?aid=AFFILIATE_ID_HERE"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block rounded-xl border border-stone-300 px-3 py-2 text-xs font-medium text-stone-700 hover:border-stone-500 hover:text-stone-900"
+            >
+              Book on Klook →
+            </a>
+          </div>
+        </div>
+        <p className="text-xs text-stone-400">Links may earn us a small commission. Prices shown on Klook.</p>
+      </div>
     </div>
   );
 }
