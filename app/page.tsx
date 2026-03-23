@@ -5,7 +5,7 @@ import { ArrowRight, Calculator, Map, Smartphone } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { itineraryList, itinerarySlugs, tools } from "@/lib/site";
+import { itineraryList, tools } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Japan Toolkit: Rail Pass, eSIM, and Japan Itinerary Planning Tools",
