@@ -4,6 +4,13 @@ export const metadata: Metadata = {
   title: "About — Japan Toolkit",
   description:
     "Meet the people behind Japan Toolkit — two frequent Japan travelers building the practical trip-planning resource they wished existed.",
+  alternates: { canonical: "https://japantoolkit.com/about" },
+  openGraph: {
+    title: "About — Japan Toolkit",
+    description: "Meet the people behind Japan Toolkit — two frequent Japan travelers building the practical trip-planning resource they wished existed.",
+    url: "https://japantoolkit.com/about",
+    images: [{ url: "https://japantoolkit.com/opengraph-image", width: 1200, height: 630 }],
+  },
 };
 
 const team = [
@@ -41,7 +48,7 @@ export default function AboutPage() {
         <h2 className="text-2xl font-semibold text-stone-900">The team</h2>
         <div className="grid gap-6 sm:grid-cols-2">
           {team.map((person) => (
-            <div
+            <article
               key={person.name}
               className="flex flex-col items-center gap-5 rounded-2xl border border-stone-200 bg-white/85 p-8 text-center shadow-sm sm:flex-row sm:text-left"
             >
@@ -56,7 +63,7 @@ export default function AboutPage() {
                 <p className="text-xs font-medium uppercase tracking-[0.15em] text-amber-700">{person.role}</p>
                 <p className="mt-2 text-sm leading-6 text-stone-600">{person.bio}</p>
               </div>
-            </div>
+            </article>
           ))}
         </div>
       </section>

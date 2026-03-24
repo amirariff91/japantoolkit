@@ -84,7 +84,7 @@ export default function HomePage() {
           {tools.map((tool) => {
             const Icon = icons[tool.icon];
             return (
-              <Card key={tool.href} className="border-stone-200 bg-white/80 shadow-sm">
+              <Card key={tool.href} className={`relative border-stone-200 bg-white/80 shadow-sm${tool.comingSoon ? " opacity-60" : ""}`}>
                 <CardHeader>
                   <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-amber-100 text-amber-800">
                     <Icon className="h-5 w-5" />
@@ -93,12 +93,18 @@ export default function HomePage() {
                   <CardDescription>{tool.description}</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <Button asChild variant="ghost" className="px-0 text-stone-900 hover:bg-transparent">
-                    <Link href={tool.href}>
-                      Open tool
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Link>
-                  </Button>
+                  {tool.comingSoon ? (
+                    <Button variant="ghost" disabled className="px-0 text-stone-900 hover:bg-transparent opacity-50 cursor-not-allowed">
+                      {tool.cta}
+                    </Button>
+                  ) : (
+                    <Button asChild variant="ghost" className="px-0 text-stone-900 hover:bg-transparent">
+                      <Link href={tool.href}>
+                        {tool.cta}
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </Link>
+                    </Button>
+                  )}
                 </CardContent>
               </Card>
             );

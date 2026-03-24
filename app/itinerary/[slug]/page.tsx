@@ -29,6 +29,13 @@ export function generateMetadata({ params }: ItineraryPageProps): Metadata {
   return {
     title: itinerary.seoTitle,
     description: itinerary.metaDescription,
+    openGraph: {
+      title: itinerary.seoTitle,
+      description: itinerary.metaDescription,
+      url: `https://japantoolkit.com/itinerary/${params.slug}`,
+      images: [{ url: "https://japantoolkit.com/opengraph-image", width: 1200, height: 630 }],
+    },
+    alternates: { canonical: `https://japantoolkit.com/itinerary/${params.slug}` },
   };
 }
 

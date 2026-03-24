@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 
+
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -30,6 +31,8 @@ export function RailPassCalculator() {
   const [extraTripCount, setExtraTripCount] = useState(0);
   const [extraTripCost, setExtraTripCost] = useState(12000);
   const [passType, setPassType] = useState<PassType>("7-day");
+  const [email, setEmail] = useState("");
+  const [saved, setSaved] = useState(false);
 
   const totals = useMemo(() => {
     const presetTotal = selectedRoutes.reduce((sum, routeId) => {
@@ -219,6 +222,29 @@ export function RailPassCalculator() {
           )}
         </CardContent>
       </Card>
+      {!saved ? (
+        <div className="rounded-2xl border border-amber-200 bg-amber-50 p-5 space-y-3">
+          <p className="text-sm font-semibold text-stone-900">Save your results</p>
+          <p className="text-xs text-stone-600">Get a copy of your calculation plus our Japan planning checklist.</p>
+          <div className="flex gap-2">
+            <input
+              type="email"
+              placeholder="your@email.com"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="flex-1 rounded-xl border border-stone-300 px-3 py-2 text-sm text-stone-900 placeholder:text-stone-400 focus:border-amber-500 focus:outline-none"
+            />
+            <button
+              onClick={() => { if (email) setSaved(true); }}
+              className="rounded-xl bg-stone-900 px-4 py-2 text-sm font-medium text-white hover:bg-stone-800"
+            >
+              Save
+            </button>
+          </div>
+        </div>
+      ) : (
+        <p className="text-sm text-stone-500 text-center">✓ Saved — check your inbox shortly.</p>
+      )}
     </div>
   );
 }

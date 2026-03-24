@@ -3,7 +3,7 @@ import type { MetadataRoute } from "next";
 import { itineraryList, siteConfig, tools } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticRoutes = ["", "/tools", "/itinerary"];
+  const staticRoutes = ["", "/tools", "/itinerary", "/about"];
   const toolRoutes = tools.map((tool) => tool.href);
   const itineraryRoutes = itineraryList.map((itinerary) => `/itinerary/${itinerary.slug}`);
 

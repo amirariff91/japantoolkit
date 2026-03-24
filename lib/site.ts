@@ -14,6 +14,8 @@ export const tools = [
     detail: "Useful for travelers comparing expensive shinkansen segments inside one tight travel window.",
     href: "/tools/rail-pass-calculator",
     icon: "calculator" as const,
+    cta: "Calculate now",
+    comingSoon: false,
   },
   {
     title: "eSIM vs Pocket Wi-Fi",
@@ -21,6 +23,8 @@ export const tools = [
     detail: "Best for arrival-day planning, family trips, and deciding how many devices need data.",
     href: "/tools/esim-vs-pocket-wifi",
     icon: "smartphone" as const,
+    cta: "Compare options",
+    comingSoon: false,
   },
   {
     title: "Budget Estimator",
@@ -28,6 +32,8 @@ export const tools = [
     detail: "This page is live as a coming-soon entry so the tools hub stays aligned with the product roadmap.",
     href: "/tools/budget-estimator",
     icon: "map" as const,
+    cta: "Coming soon",
+    comingSoon: true,
   },
 ];
 

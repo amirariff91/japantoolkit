@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     description:
       "Plan your Japan trip budget with our upcoming estimator. Covering hotels, food, transport, attractions, and connectivity costs by travel style and trip length.",
     url: "https://japantoolkit.com/tools/budget-estimator",
-    images: [{ url: "https://japantoolkit.com/og-image.svg", width: 1200, height: 630 }],
+    images: [{ url: "https://japantoolkit.com/opengraph-image", width: 1200, height: 630 }],
   },
 };
 

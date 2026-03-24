@@ -27,19 +27,25 @@ export default function ToolsHubPage() {
 
       <section className="grid gap-5 md:grid-cols-3">
         {tools.map((tool) => (
-          <Card key={tool.href} className="border-stone-200 bg-white/85 shadow-sm">
+          <Card key={tool.href} className={`relative border-stone-200 bg-white/85 shadow-sm${tool.comingSoon ? " opacity-60" : ""}`}>
             <CardHeader>
               <CardTitle>{tool.title}</CardTitle>
               <CardDescription>{tool.description}</CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-sm leading-6 text-stone-600">{tool.detail}</p>
-              <Button asChild variant="outline" className="border-stone-300 bg-white">
-                <Link href={tool.href}>
-                  Open page
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
+              {tool.comingSoon ? (
+                <Button variant="outline" disabled className="border-stone-300 bg-white opacity-50 cursor-not-allowed">
+                  {tool.cta}
+                </Button>
+              ) : (
+                <Button asChild variant="outline" className="border-stone-300 bg-white">
+                  <Link href={tool.href}>
+                    {tool.cta}
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+              )}
             </CardContent>
           </Card>
         ))}

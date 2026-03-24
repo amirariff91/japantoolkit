@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     description:
       "Compare eSIM and pocket Wi-Fi for Japan travel. See setup, battery, sharing, and cost differences — then use the quick quiz to pick the right option for your trip.",
     url: "https://japantoolkit.com/tools/esim-vs-pocket-wifi",
-    images: [{ url: "https://japantoolkit.com/og-image.svg", width: 1200, height: 630 }],
+    images: [{ url: "https://japantoolkit.com/opengraph-image", width: 1200, height: 630 }],
   },
 };
 

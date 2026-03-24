@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     description:
       "Use this free JR Pass calculator to see if the Japan Rail Pass saves you money. Add your shinkansen routes and compare the total against the current pass price.",
     url: "https://japantoolkit.com/tools/rail-pass-calculator",
-    images: [{ url: "https://japantoolkit.com/og-image.svg", width: 1200, height: 630 }],
+    images: [{ url: "https://japantoolkit.com/opengraph-image", width: 1200, height: 630 }],
   },
 };
 
@@ -85,10 +85,10 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      name: "How much does the JR Pass cost in 2025?",
+      name: "How much does the JR Pass cost?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "As of 2024–2025, the 7-day ordinary JR Pass costs around ¥50,000 (~USD 330). The 14-day pass is around ¥80,000 and the 21-day pass around ¥100,000. Prices vary by class (ordinary vs green car) and fluctuate with exchange rates.",
+        text: "The 7-day ordinary JR Pass currently costs around ¥50,000 (approximately USD 330). The 14-day pass is around ¥80,000 and the 21-day pass around ¥100,000. Check the official JR website or your country's authorized reseller for the latest pricing.",
       },
     },
   ],
@@ -111,6 +111,35 @@ export default function RailPassCalculatorPage() {
       </section>
 
       <RailPassCalculator />
+
+      <section className="space-y-4">
+        <h2 className="text-2xl font-semibold text-stone-900">Common questions</h2>
+        <div className="space-y-4">
+          {[
+            {
+              q: "Is the JR Pass worth it?",
+              a: "The JR Pass is worth it if your shinkansen costs exceed the pass price within the 7-day window. It typically pays off for multi-city routes like Tokyo → Kyoto → Hiroshima.",
+            },
+            {
+              q: "Can I use the JR Pass on the Shinkansen?",
+              a: "Yes — most Shinkansen lines are covered. The Nozomi and Mizuho express services are excluded. Use Hikari or Sakura trains instead.",
+            },
+            {
+              q: "What routes does the JR Pass cover?",
+              a: "All JR-operated trains nationwide: most Shinkansen, JR local and rapid trains, JR buses on selected routes, and the JR ferry to Miyajima. Private railways and subway lines are not covered.",
+            },
+            {
+              q: "How much does the JR Pass cost?",
+              a: "The 7-day ordinary pass is around ¥50,000 (~USD 330). The 14-day is ~¥80,000 and the 21-day is ~¥100,000. Check the official JR site or authorized resellers for current pricing.",
+            },
+          ].map(({ q, a }) => (
+            <div key={q} className="rounded-2xl border border-stone-200 bg-white/85 p-5">
+              <p className="font-semibold text-stone-900">{q}</p>
+              <p className="mt-2 text-sm leading-6 text-stone-600">{a}</p>
+            </div>
+          ))}
+        </div>
+      </section>
 
       <section className="grid gap-5 md:grid-cols-3">
         <Card className="border-stone-200 bg-white/85">
