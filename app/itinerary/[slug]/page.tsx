@@ -74,12 +74,6 @@ export default function ItineraryDetailPage({ params }: ItineraryPageProps) {
 
   const hero = getHeroImage(params.slug);
 
-  const structuredData = itinerary.highlights.map((highlight, index) => ({
-    "@type": "TouristAttraction",
-    name: highlight,
-    description: itinerary.attractionDescriptions[index] ?? itinerary.intro,
-  }));
-
   return (
     <div className="space-y-10 py-10">
       <script
@@ -87,7 +81,37 @@ export default function ItineraryDetailPage({ params }: ItineraryPageProps) {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@graph": structuredData,
+            "@type": "TouristTrip",
+            "name": itinerary.title,
+            "description": itinerary.intro,
+            "provider": {
+              "@type": "Organization",
+              "name": "Japan Toolkit",
+              "url": "https://japantoolkit.com"
+            },
+            "itinerary": {
+              "@type": "ItemList",
+              "numberOfItems": itinerary.highlights.length,
+              "itemListElement": itinerary.highlights.map((h, i) => ({
+                "@type": "ListItem",
+                "position": i + 1,
+                "name": h
+              }))
+            }
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://japantoolkit.com" },
+              { "@type": "ListItem", "position": 2, "name": "Itinerary", "item": "https://japantoolkit.com/itinerary" },
+              { "@type": "ListItem", "position": 3, "name": itinerary.title, "item": `https://japantoolkit.com/itinerary/${params.slug}` }
+            ]
           }),
         }}
       />
@@ -103,6 +127,7 @@ export default function ItineraryDetailPage({ params }: ItineraryPageProps) {
         <Badge className="bg-rose-700 text-white hover:bg-rose-700">{itinerary.durationLabel}</Badge>
         <h1 className="text-4xl font-semibold tracking-tight text-stone-900 md:text-5xl">{itinerary.title}</h1>
         <p className="max-w-3xl text-lg leading-8 text-stone-700">{itinerary.intro}</p>
+        <p className="text-xs text-stone-400 mt-1">By Yiyan · Last reviewed: March 2026</p>
       </section>
 
       <div className="grid gap-6 lg:grid-cols-[0.85fr_1.15fr]">
@@ -182,7 +207,9 @@ export default function ItineraryDetailPage({ params }: ItineraryPageProps) {
             </a>
           </div>
         </div>
-        <p className="text-xs text-stone-400">Links may earn us a small commission. Prices shown on Klook.</p>
+        <p className="text-xs text-stone-500 leading-5 rounded-xl border border-stone-200 bg-stone-50 px-4 py-3">
+          <strong>Affiliate disclosure:</strong> Some links on this page are affiliate links. If you book through them, we may earn a small commission at no extra cost to you. We only link to experiences we would genuinely recommend.
+        </p>
       </div>
     </div>
   );

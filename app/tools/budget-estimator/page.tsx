@@ -40,6 +40,7 @@ export default function BudgetEstimatorPage() {
           This page is reserved for a full trip budget estimator covering hotel class, regional transport, attraction
           mix, food style, and seasonal travel peaks.
         </p>
+        <p className="text-xs text-stone-400 mt-1">By Amir · Last reviewed: March 2026</p>
       </section>
 
       <Card className="border-dashed border-stone-300 bg-white/85">

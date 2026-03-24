@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   title: "Japan Travel Planning Tools",
   description:
     "Use Japan Toolkit calculators and comparison guides to plan rail costs, connectivity, and trip budgeting before you book flights or hotels.",
+  alternates: { canonical: "https://japantoolkit.com/tools" },
 };
 
 export default function ToolsHubPage() {

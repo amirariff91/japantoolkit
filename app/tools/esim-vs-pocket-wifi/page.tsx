@@ -69,6 +69,7 @@ export default function EsimVsPocketWifiPage() {
           Both options work well in Japan, but they solve different problems. eSIM is usually the cleanest setup for a
           solo traveler, while pocket Wi-Fi can be the better value when a family or group wants one shared hotspot.
         </p>
+        <p className="text-xs text-stone-400 mt-1">By Amir · Last reviewed: March 2026</p>
       </section>
 
       <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">

@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   title: "Japan Toolkit: Rail Pass, eSIM, and Japan Itinerary Planning Tools",
   description:
     "Plan Japan with practical tools and itinerary templates. Compare eSIM vs pocket Wi-Fi, check if the JR Pass pays off, and browse trip plans for families, solo travelers, anime fans, and first-timers.",
+  alternates: { canonical: "https://japantoolkit.com" },
 };
 
 const icons = {

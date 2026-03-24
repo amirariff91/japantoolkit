@@ -70,6 +70,25 @@ export default function RootLayout({
       >
         <div className="relative min-h-screen">
           <div className="absolute inset-x-0 top-0 -z-10 h-[28rem] bg-[linear-gradient(180deg,rgba(251,191,36,0.08),transparent)]" />
+          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "WebSite",
+                "@id": "https://japantoolkit.com/#website",
+                "url": "https://japantoolkit.com",
+                "name": "Japan Toolkit",
+                "description": "Practical Japan trip planning tools and itineraries"
+              },
+              {
+                "@type": "Organization",
+                "@id": "https://japantoolkit.com/#organization",
+                "name": "Japan Toolkit",
+                "url": "https://japantoolkit.com",
+                "email": "hello@japantoolkit.com"
+              }
+            ]
+          }) }} />
           <SiteHeader />
           <main className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">{children}</main>
           <SiteFooter />

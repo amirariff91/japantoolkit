@@ -108,6 +108,7 @@ export default function RailPassCalculatorPage() {
           The nationwide JR Pass only makes sense for a narrow set of trips. Use this calculator to total the long
           shinkansen legs on your route and compare them against the current 7-day pass price.
         </p>
+        <p className="text-xs text-stone-400 mt-1">By Amir · Last reviewed: March 2026</p>
       </section>
 
       <RailPassCalculator />

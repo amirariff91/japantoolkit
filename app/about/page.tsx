@@ -17,14 +17,12 @@ const team = [
   {
     name: "Amir",
     role: "Co-founder",
-    avatar: "https://i.pravatar.cc/300?img=12",
-    bio: "Malaysian software developer and three-time Japan visitor. Spends more time than is reasonable researching JR Pass vs. IC card strategies, bullet-train seat assignments, and the exact optimal rail route between any two points in the country.",
+    bio: "Malaysian software developer and Japan enthusiast who has visited three times (2019, 2022, 2024). Has ridden every major shinkansen corridor including Tokyo–Kyoto–Osaka, Hiroshima–Miyajima, and the Tohoku line to Sendai. Deeply opinionated about JR Pass math — it only pays off for specific multi-city itineraries, not short stays.",
   },
   {
     name: "Yiyan",
     role: "Co-founder",
-    avatar: "https://i.pravatar.cc/300?img=47",
-    bio: "Based in Kuala Lumpur. The itinerary brain of the operation — responsible for building the day-by-day plans that actually fit how real people travel. Happiest wandering Kyoto temple grounds at dawn or hunting down the next great Osaka street-food stall.",
+    bio: "Four Japan visits, specializing in slow-travel and cultural deep-dives. Built every day-by-day itinerary on this site from real trip notes. Goes back specifically for Kyoto in shoulder season and has strong feelings about which temples are worth the early wake-up.",
   },
 ];
 
@@ -52,12 +50,9 @@ export default function AboutPage() {
               key={person.name}
               className="flex flex-col items-center gap-5 rounded-2xl border border-stone-200 bg-white/85 p-8 text-center shadow-sm sm:flex-row sm:text-left"
             >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={person.avatar}
-                alt={`Photo of ${person.name}`}
-                className="h-24 w-24 flex-shrink-0 rounded-full object-cover ring-4 ring-amber-100"
-              />
+                  <div className="h-24 w-24 flex-shrink-0 rounded-full bg-amber-100 flex items-center justify-center text-3xl font-semibold text-amber-800">
+                {person.name[0]}
+              </div>
               <div className="space-y-1">
                 <p className="text-xl font-semibold text-stone-900">{person.name}</p>
                 <p className="text-xs font-medium uppercase tracking-[0.15em] text-amber-700">{person.role}</p>
@@ -66,6 +61,7 @@ export default function AboutPage() {
             </article>
           ))}
         </div>
+        <p className="text-xs text-stone-400">Page last updated: March 2026</p>
       </section>
 
       {/* Why section */}
@@ -85,6 +81,12 @@ export default function AboutPage() {
           <p>
             We&apos;re not a travel agency and we don&apos;t take sponsored trips. We just keep going back to Japan,
             keep refining the playbook, and share what works.
+          </p>
+          <p>
+            Questions or feedback? Email us at{" "}
+            <a href="mailto:hello@japantoolkit.com" className="text-amber-700 underline underline-offset-4 hover:text-amber-800">
+              hello@japantoolkit.com
+            </a>
           </p>
         </div>
       </section>

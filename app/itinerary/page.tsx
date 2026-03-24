@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   title: "Japan Itineraries",
   description:
     "Browse static Japan itinerary templates by trip length and travel style, including first-time, anime, family, solo, budget, classic, and slow-travel routes.",
+  alternates: { canonical: "https://japantoolkit.com/itinerary" },
 };
 
 export default function ItineraryHubPage() {
