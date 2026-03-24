@@ -14,6 +14,9 @@ export function SiteHeader() {
           <Link className="transition hover:text-stone-950" href="/itinerary">
             Itineraries
           </Link>
+          <Link className="transition hover:text-stone-950" href="/about">
+            About
+          </Link>
         </nav>
       </div>
     </header>

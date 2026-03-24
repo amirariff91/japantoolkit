@@ -6,9 +6,19 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 
 export const metadata: Metadata = {
-  title: "eSIM vs Pocket Wi-Fi for Japan",
+  title: "eSIM vs Pocket Wi-Fi Japan — Which Should You Choose?",
   description:
-    "Compare eSIM and pocket Wi-Fi for Japan travel, including setup, battery impact, sharing, and which option fits solo trips, families, and remote work.",
+    "Compare eSIM and pocket Wi-Fi for Japan travel. See setup, battery, sharing, and cost differences — then use the quick quiz to pick the right option for your trip.",
+  alternates: {
+    canonical: "https://japantoolkit.com/tools/esim-vs-pocket-wifi",
+  },
+  openGraph: {
+    title: "eSIM vs Pocket Wi-Fi Japan — Which Should You Choose?",
+    description:
+      "Compare eSIM and pocket Wi-Fi for Japan travel. See setup, battery, sharing, and cost differences — then use the quick quiz to pick the right option for your trip.",
+    url: "https://japantoolkit.com/tools/esim-vs-pocket-wifi",
+    images: [{ url: "https://japantoolkit.com/og-image.svg", width: 1200, height: 630 }],
+  },
 };
 
 const howToSchema = {
@@ -36,10 +46,21 @@ const howToSchema = {
   ],
 };
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://japantoolkit.com" },
+    { "@type": "ListItem", position: 2, name: "Tools", item: "https://japantoolkit.com/tools" },
+    { "@type": "ListItem", position: 3, name: "eSIM vs Pocket Wi-Fi", item: "https://japantoolkit.com/tools/esim-vs-pocket-wifi" },
+  ],
+};
+
 export default function EsimVsPocketWifiPage() {
   return (
     <div className="space-y-10 py-10">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       <section className="space-y-4">
         <Badge className="bg-amber-700 text-white hover:bg-amber-700">Tool</Badge>

@@ -5,9 +5,19 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export const metadata: Metadata = {
-  title: "JR Rail Pass Calculator",
+  title: "JR Pass Calculator — Is the Japan Rail Pass Worth It?",
   description:
-    "Calculate whether a 7-day JR Pass is worth it for your Japan trip by adding common shinkansen routes and comparing the total against the current pass price.",
+    "Use this free JR Pass calculator to see if the Japan Rail Pass saves you money. Add your shinkansen routes and compare the total against the current pass price.",
+  alternates: {
+    canonical: "https://japantoolkit.com/tools/rail-pass-calculator",
+  },
+  openGraph: {
+    title: "JR Pass Calculator — Is the Japan Rail Pass Worth It?",
+    description:
+      "Use this free JR Pass calculator to see if the Japan Rail Pass saves you money. Add your shinkansen routes and compare the total against the current pass price.",
+    url: "https://japantoolkit.com/tools/rail-pass-calculator",
+    images: [{ url: "https://japantoolkit.com/og-image.svg", width: 1200, height: 630 }],
+  },
 };
 
 const howToSchema = {
@@ -35,10 +45,61 @@ const howToSchema = {
   ],
 };
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://japantoolkit.com" },
+    { "@type": "ListItem", position: 2, name: "Tools", item: "https://japantoolkit.com/tools" },
+    { "@type": "ListItem", position: 3, name: "JR Pass Calculator", item: "https://japantoolkit.com/tools/rail-pass-calculator" },
+  ],
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "Is the JR Pass worth it?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The JR Pass is worth it if your long-distance shinkansen costs exceed the pass price within the 7-day validity window. It typically pays off for routes like Tokyo → Kyoto → Hiroshima or multi-city trips across Honshu.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can I use the JR Pass on the Shinkansen?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. The nationwide JR Pass covers most Shinkansen lines including Tokaido, Sanyo, Tohoku, and Hokuriku. The Nozomi and Mizuho express services on the Tokaido and Sanyo Shinkansen are excluded — you must take Hikari or Sakura trains instead.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What routes does the JR Pass cover?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The JR Pass covers all JR-operated trains nationwide including most Shinkansen, JR local and rapid trains, JR buses on selected routes, and the JR ferry to Miyajima. It does not cover private railways, subway lines, or non-JR buses.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How much does the JR Pass cost in 2025?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "As of 2024–2025, the 7-day ordinary JR Pass costs around ¥50,000 (~USD 330). The 14-day pass is around ¥80,000 and the 21-day pass around ¥100,000. Prices vary by class (ordinary vs green car) and fluctuate with exchange rates.",
+      },
+    },
+  ],
+};
+
 export default function RailPassCalculatorPage() {
   return (
     <div className="space-y-10 py-10">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       <section className="space-y-4">
         <Badge className="bg-amber-700 text-white hover:bg-amber-700">Tool</Badge>
