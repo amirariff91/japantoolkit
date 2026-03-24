@@ -32,7 +32,7 @@ export function RailPassCalculator() {
   const [extraTripCost, setExtraTripCost] = useState(12000);
   const [passType, setPassType] = useState<PassType>("7-day");
   const [email, setEmail] = useState("");
-  const [saved, setSaved] = useState(false);
+  const [saveStatus, setSaveStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
   const totals = useMemo(() => {
     const presetTotal = selectedRoutes.reduce((sum, routeId) => {
@@ -222,7 +222,7 @@ export function RailPassCalculator() {
           )}
         </CardContent>
       </Card>
-      {!saved ? (
+      {saveStatus !== "success" ? (
         <div className="rounded-2xl border border-amber-200 bg-amber-50 p-5 space-y-3">
           <p className="text-sm font-semibold text-stone-900">Save your results</p>
           <p className="text-xs text-stone-600">Get a copy of your calculation plus our Japan planning checklist.</p>
@@ -232,18 +232,36 @@ export function RailPassCalculator() {
               placeholder="your@email.com"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="flex-1 rounded-xl border border-stone-300 px-3 py-2 text-sm text-stone-900 placeholder:text-stone-400 focus:border-amber-500 focus:outline-none"
+              disabled={saveStatus === "loading"}
+              className="flex-1 rounded-xl border border-stone-300 px-3 py-2 text-sm text-stone-900 placeholder:text-stone-400 focus:border-amber-500 focus:outline-none disabled:opacity-50"
             />
             <button
-              onClick={() => { if (email) setSaved(true); }}
-              className="rounded-xl bg-stone-900 px-4 py-2 text-sm font-medium text-white hover:bg-stone-800"
+              disabled={saveStatus === "loading" || !email}
+              onClick={async () => {
+                if (!email) return;
+                setSaveStatus("loading");
+                try {
+                  const res = await fetch("/api/subscribe", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ email }),
+                  });
+                  setSaveStatus(res.ok ? "success" : "error");
+                } catch {
+                  setSaveStatus("error");
+                }
+              }}
+              className="rounded-xl bg-stone-900 px-4 py-2 text-sm font-medium text-white hover:bg-stone-800 disabled:opacity-50"
             >
-              Save
+              {saveStatus === "loading" ? "Sending…" : "Save"}
             </button>
           </div>
+          {saveStatus === "error" && (
+            <p className="text-xs text-red-600">Something went wrong. Try again.</p>
+          )}
         </div>
       ) : (
-        <p className="text-sm text-stone-500 text-center">✓ Saved — check your inbox shortly.</p>
+        <p className="text-sm text-stone-500 text-center">✓ Checklist sent — check your inbox.</p>
       )}
     </div>
   );

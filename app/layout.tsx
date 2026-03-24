@@ -42,6 +42,8 @@ export const metadata: Metadata = {
   },
 };
 
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -49,16 +51,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Script
-        src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"
-        strategy="afterInteractive"
-      />
-      <Script id="ga4-init" strategy="afterInteractive">{`
+      {GA_ID && (
+        <>
+          <Script
+            src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+            strategy="afterInteractive"
+          />
+          <Script id="ga4-init" strategy="afterInteractive">{`
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag("js", new Date());
-  gtag("config", "G-XXXXXXXXXX");
+  gtag("config", "${GA_ID}");
 `}</Script>
+        </>
+      )}
       <body
         className={`${geistSans.variable} ${geistMono.variable} min-h-screen bg-[radial-gradient(circle_at_top,rgba(251,191,36,0.15),transparent_28%),linear-gradient(180deg,#fffaf0_0%,#fffdf8_30%,#f8fafc_100%)] font-sans text-stone-900 antialiased`}
       >
