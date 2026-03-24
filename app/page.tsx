@@ -8,10 +8,19 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { itineraryList, tools } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Japan Toolkit: Rail Pass, eSIM, and Japan Itinerary Planning Tools",
+  title: {
+    absolute: "Japan Toolkit — Rail Pass, eSIM & Itinerary Planning Tools",
+  },
   description:
     "Plan Japan with practical tools and itinerary templates. Compare eSIM vs pocket Wi-Fi, check if the JR Pass pays off, and browse trip plans for families, solo travelers, anime fans, and first-timers.",
   alternates: { canonical: "https://japantoolkit.com" },
+  openGraph: {
+    title: "Japan Toolkit — Rail Pass, eSIM & Itinerary Planning Tools",
+    description:
+      "Plan Japan with practical tools and itinerary templates. Compare eSIM vs pocket Wi-Fi, check if the JR Pass pays off, and browse trip plans for families, solo travelers, anime fans, and first-timers.",
+    url: "https://japantoolkit.com",
+    images: [{ url: "https://japantoolkit.com/opengraph-image", width: 1200, height: 630 }],
+  },
 };
 
 const icons = {
@@ -152,17 +161,18 @@ export default function HomePage() {
       <section className="rounded-[2rem] border border-stone-200 bg-stone-900 px-6 py-10 text-stone-50 md:px-10">
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div className="max-w-2xl">
-            <p className="text-sm uppercase tracking-[0.24em] text-amber-200">Built for search intent</p>
+            <p className="text-sm uppercase tracking-[0.24em] text-amber-200">Built from real trips</p>
             <h2 className="mt-3 text-3xl font-semibold tracking-tight">
-              Programmatic pages with enough substance to be useful.
+              Every itinerary comes from actual travel notes, not templates.
             </h2>
             <p className="mt-3 text-stone-300">
-              Each itinerary page has a unique opening, its own highlight set, and a realistic day-by-day outline so
-              travelers can compare styles instead of reading duplicate templates.
+              Each page has its own routing logic, highlight set, and day-by-day outline based on what travelers with
+              that specific style actually did — so you can compare approaches instead of reading the same route
+              repackaged.
             </p>
           </div>
           <Button asChild size="lg" className="bg-amber-500 text-stone-950 hover:bg-amber-400">
-            <Link href="/itinerary">See itinerary coverage</Link>
+            <Link href="/itinerary">Browse itineraries</Link>
           </Button>
         </div>
       </section>

@@ -11,6 +11,32 @@ type ItineraryPageProps = {
   };
 };
 
+const HERO_IMAGES: Record<string, { src: string; alt: string }> = {
+  anime: {
+    src: "https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?w=1200&q=80",
+    alt: "Akihabara electric town at night, neon signs and anime billboards",
+  },
+  family: {
+    src: "https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=1200&q=80",
+    alt: "Osaka Castle surrounded by cherry blossoms with families walking the grounds",
+  },
+  budget: {
+    src: "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=1200&q=80",
+    alt: "Quiet lantern-lit alley in Kyoto at dusk",
+  },
+  default: {
+    src: "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=80",
+    alt: "Tokyo skyline at night with Rainbow Bridge and city lights",
+  },
+};
+
+function getHeroImage(slug: string): { src: string; alt: string } {
+  if (slug.includes("anime")) return HERO_IMAGES.anime;
+  if (slug.includes("family")) return HERO_IMAGES.family;
+  if (slug.includes("budget") || slug.includes("solo") || slug.includes("slow")) return HERO_IMAGES.budget;
+  return HERO_IMAGES.default;
+}
+
 export function generateStaticParams() {
   return itineraryList.map((itinerary) => ({
     slug: itinerary.slug,
@@ -26,6 +52,7 @@ export function generateMetadata({ params }: ItineraryPageProps): Metadata {
     };
   }
 
+  const hero = getHeroImage(params.slug);
   return {
     title: itinerary.seoTitle,
     description: itinerary.metaDescription,
@@ -33,7 +60,7 @@ export function generateMetadata({ params }: ItineraryPageProps): Metadata {
       title: itinerary.seoTitle,
       description: itinerary.metaDescription,
       url: `https://japantoolkit.com/itinerary/${params.slug}`,
-      images: [{ url: "https://japantoolkit.com/opengraph-image", width: 1200, height: 630 }],
+      images: [{ url: hero.src, width: 1200, height: 630, alt: hero.alt }],
     },
     alternates: { canonical: `https://japantoolkit.com/itinerary/${params.slug}` },
   };
@@ -41,7 +68,7 @@ export function generateMetadata({ params }: ItineraryPageProps): Metadata {
 
 const HERO_IMAGES: Record<string, { src: string; alt: string }> = {
   anime: {
-    src: "https://images.unsplash.com/photo-1519181258491-889d47eb9f2d?w=1200&q=80",
+    src: "https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?w=1200&q=80",
     alt: "Akihabara electric town at night, neon signs and anime billboards",
   },
   family: {

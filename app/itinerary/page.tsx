@@ -7,10 +7,17 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { itineraryList } from "@/lib/itineraries";
 
 export const metadata: Metadata = {
-  title: "Japan Itineraries",
+  title: "Japan Itinerary Ideas by Trip Length and Travel Style",
   description:
-    "Browse static Japan itinerary templates by trip length and travel style, including first-time, anime, family, solo, budget, classic, and slow-travel routes.",
+    "Browse Japan itinerary templates for first-timers, anime fans, families, solo travelers, and budget trips. Each route has a day-by-day outline built from real travel notes.",
   alternates: { canonical: "https://japantoolkit.com/itinerary" },
+  openGraph: {
+    title: "Japan Itinerary Ideas by Trip Length and Travel Style",
+    description:
+      "Browse Japan itinerary templates for first-timers, anime fans, families, solo travelers, and budget trips. Each route has a day-by-day outline built from real travel notes.",
+    url: "https://japantoolkit.com/itinerary",
+    images: [{ url: "https://japantoolkit.com/opengraph-image", width: 1200, height: 630 }],
+  },
 };
 
 export default function ItineraryHubPage() {

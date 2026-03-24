@@ -85,7 +85,14 @@ export default function RootLayout({
                 "@id": "https://japantoolkit.com/#organization",
                 "name": "Japan Toolkit",
                 "url": "https://japantoolkit.com",
-                "email": "hello@japantoolkit.com"
+                "email": "hello@japantoolkit.com",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://japantoolkit.com/opengraph-image",
+                  "width": 1200,
+                  "height": 630
+                },
+                "sameAs": []
               }
             ]
           }) }} />

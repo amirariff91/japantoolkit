@@ -12,6 +12,13 @@ export const metadata: Metadata = {
   description:
     "Use Japan Toolkit calculators and comparison guides to plan rail costs, connectivity, and trip budgeting before you book flights or hotels.",
   alternates: { canonical: "https://japantoolkit.com/tools" },
+  openGraph: {
+    title: "Japan Travel Planning Tools",
+    description:
+      "Use Japan Toolkit calculators and comparison guides to plan rail costs, connectivity, and trip budgeting before you book flights or hotels.",
+    url: "https://japantoolkit.com/tools",
+    images: [{ url: "https://japantoolkit.com/opengraph-image", width: 1200, height: 630 }],
+  },
 };
 
 export default function ToolsHubPage() {
