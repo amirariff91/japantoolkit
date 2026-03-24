@@ -28,12 +28,12 @@ export const tools = [
   },
   {
     title: "Budget Estimator",
-    description: "A placeholder for the next tool in the stack, covering hotels, food, transit, and attraction spend.",
-    detail: "This page is live as a coming-soon entry so the tools hub stays aligned with the product roadmap.",
+    description: "Set your accommodation, food, transport, and shopping style to get a realistic trip cost range in yen and USD.",
+    detail: "Covers 5 spending categories with tiered options — from capsule hostels to ryokan, konbini meals to omakase.",
     href: "/tools/budget-estimator",
     icon: "map" as const,
-    cta: "Coming soon",
-    comingSoon: true,
+    cta: "Estimate budget",
+    comingSoon: false,
   },
 ];
 

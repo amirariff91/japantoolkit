@@ -66,32 +66,6 @@ export function generateMetadata({ params }: ItineraryPageProps): Metadata {
   };
 }
 
-const HERO_IMAGES: Record<string, { src: string; alt: string }> = {
-  anime: {
-    src: "https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?w=1200&q=80",
-    alt: "Akihabara electric town at night, neon signs and anime billboards",
-  },
-  family: {
-    src: "https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=1200&q=80",
-    alt: "Osaka Castle surrounded by cherry blossoms with families walking the grounds",
-  },
-  budget: {
-    src: "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=1200&q=80",
-    alt: "Quiet lantern-lit alley in Kyoto at dusk",
-  },
-  default: {
-    src: "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=80",
-    alt: "Tokyo skyline at night with Rainbow Bridge and city lights",
-  },
-};
-
-function getHeroImage(slug: string): { src: string; alt: string } {
-  if (slug.includes("anime")) return HERO_IMAGES.anime;
-  if (slug.includes("family")) return HERO_IMAGES.family;
-  if (slug.includes("budget") || slug.includes("solo") || slug.includes("slow")) return HERO_IMAGES.budget;
-  return HERO_IMAGES.default;
-}
-
 export default function ItineraryDetailPage({ params }: ItineraryPageProps) {
   const itinerary = getItineraryBySlug(params.slug);
 
