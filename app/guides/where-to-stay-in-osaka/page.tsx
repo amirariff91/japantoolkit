@@ -44,7 +44,7 @@ const neighbourhoods = [
     bestFor: ["Business travel", "Transit hub", "Shopping"],
     budget: "¥6,500 – ¥30,000",
     transport: "★★★★★",
-    stayIf: "You're taking day trips to Kyoto or Kobe — Shinkansen and JR lines leave from here.",
+    stayIf: "You're taking day trips to Kyoto or Kobe and want fast JR access, with Shin-Osaka one stop north for the Shinkansen.",
     skipIf: "You want to be near Dotonbori — it's 2 metro stops south (quick, but not walking distance).",
   },
   {
@@ -170,7 +170,7 @@ export default function WhereToStayInOsakaPage() {
                 <li><span className="font-semibold text-stone-900">Food / First-timer →</span> Namba</li>
                 <li><span className="font-semibold text-stone-900">Nightlife →</span> Shinsaibashi</li>
                 <li><span className="font-semibold text-stone-900">Budget →</span> Shin-Osaka or Tennoji</li>
-                <li><span className="font-semibold text-stone-900">Local feel →</span> Tanimachi</li>
+                <li><span className="font-semibold text-stone-900">Local feel →</span> Tennoji</li>
               </ul>
             </CardContent>
           </Card>
