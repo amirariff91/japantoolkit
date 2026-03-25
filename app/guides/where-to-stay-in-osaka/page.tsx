@@ -150,23 +150,22 @@ export default function WhereToStayInOsakaPage() {
           <h1 className="text-4xl font-semibold tracking-tight text-stone-900 md:text-5xl">
             Where to stay in Osaka: neighbourhood guide
           </h1>
-          <p className="max-w-3xl text-lg leading-8 text-stone-700">
-            Osaka is far more manageable than Tokyo — the metro is clean, the city is compact, and most visitors base themselves in one of five key areas. The choice mostly comes down to food access, budget, and whether you&apos;re planning day trips to Kyoto or Hiroshima.
-          </p>
           <p className="text-sm text-stone-500">By Yiyan · Last reviewed: March 2026</p>
           <img
             src="https://images.unsplash.com/photo-1590559899731-a382839e5549?w=1200&q=80"
             alt="Dotonbori canal in Osaka at night"
-            className="w-full rounded-2xl object-cover"
-            style={{ maxHeight: 420 }}
+            className="w-full rounded-2xl h-64 md:h-96 object-cover"
           />
+          <p className="max-w-3xl text-lg leading-8 text-stone-700">
+            Osaka is far more manageable than Tokyo — the metro is clean, the city is compact, and most visitors base themselves in one of five key areas. The choice mostly comes down to food access, budget, and whether you&apos;re planning day trips to Kyoto or Hiroshima.
+          </p>
         </section>
 
         {/* Quick Picker */}
         <section className="space-y-3">
-          <h2 className="text-2xl font-semibold text-stone-900">Quick picker</h2>
           <Card className="border-amber-200 bg-amber-50/60 shadow-sm">
             <CardContent className="pt-5">
+              <p className="text-xs font-semibold uppercase tracking-widest text-amber-700 mb-3">Quick pick</p>
               <ul className="space-y-2 text-sm text-stone-700">
                 <li><span className="font-semibold text-stone-900">Food / First-timer →</span> Namba</li>
                 <li><span className="font-semibold text-stone-900">Nightlife →</span> Shinsaibashi</li>
@@ -205,19 +204,18 @@ export default function WhereToStayInOsakaPage() {
                       </span>
                     ))}
                   </div>
-                  <div className="grid grid-cols-2 gap-2 rounded-xl border border-stone-100 bg-stone-50 px-4 py-3 text-xs">
-                    <div>
-                      <span className="text-stone-500">Budget/night</span>
-                      <p className="font-semibold text-stone-900">{n.budget}</p>
-                    </div>
-                    <div>
-                      <span className="text-stone-500">Transport</span>
-                      <p className="font-semibold text-stone-900">{n.transport}</p>
-                    </div>
+                  <div className="border-t border-stone-100 pt-3 mt-2 text-xs text-stone-600">
+                    <span className="font-semibold text-stone-900">{n.budget}</span>
+                    <span className="mx-2 text-stone-300">·</span>
+                    <span>Transport {n.transport}</span>
                   </div>
-                  <div className="space-y-1 text-stone-600">
-                    <p><span className="font-medium text-green-700">Stay here if:</span> {n.stayIf}</p>
-                    <p><span className="font-medium text-red-600">Skip if:</span> {n.skipIf}</p>
+                  <div className="space-y-1">
+                    <p className="text-sm text-stone-600">
+                      <span className="font-semibold text-emerald-700">Stay if:</span> {n.stayIf}
+                    </p>
+                    <p className="text-sm text-stone-600">
+                      <span className="font-semibold text-rose-600">Skip if:</span> {n.skipIf}
+                    </p>
                   </div>
                 </CardContent>
               </Card>

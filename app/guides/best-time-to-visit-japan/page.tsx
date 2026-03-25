@@ -27,9 +27,10 @@ const seasons = [
     weather: "Mild, 10–20 °C. Gradually warming from cool March to warm May.",
     highlights: ["Cherry blossoms (late Mar–Apr)", "Hanami picnics", "Golden Week festivals (late Apr–early May)"],
     crowd: "Very High",
-    crowdColor: "text-red-600",
+    crowdBadge: "bg-red-100 text-red-700",
     price: "Peak",
-    priceColor: "text-red-600",
+    priceBadge: "bg-red-100 text-red-700",
+    borderClass: "border-l-4 border-l-pink-400",
   },
   {
     name: "Summer",
@@ -38,9 +39,10 @@ const seasons = [
     weather: "Hot and humid, 25–35 °C. Rainy season June–mid-July.",
     highlights: ["Gion Matsuri (Jul, Kyoto)", "Obon lantern festivals (Aug)", "Fuji climbing season"],
     crowd: "High",
-    crowdColor: "text-orange-600",
+    crowdBadge: "bg-red-100 text-red-700",
     price: "Mid–Peak",
-    priceColor: "text-orange-600",
+    priceBadge: "bg-amber-100 text-amber-700",
+    borderClass: "border-l-4 border-l-blue-400",
   },
   {
     name: "Autumn",
@@ -49,9 +51,10 @@ const seasons = [
     weather: "Crisp and clear, 10–22 °C. Best visibility of the year.",
     highlights: ["Autumn foliage (Nov)", "Nikko & Kyoto temple colours", "Fewer typhoons after Oct"],
     crowd: "High",
-    crowdColor: "text-orange-600",
+    crowdBadge: "bg-red-100 text-red-700",
     price: "Mid–Peak",
-    priceColor: "text-orange-600",
+    priceBadge: "bg-amber-100 text-amber-700",
+    borderClass: "border-l-4 border-l-amber-500",
   },
   {
     name: "Winter",
@@ -60,9 +63,10 @@ const seasons = [
     weather: "Cold, 0–10 °C in cities. Heavy snow in Hokkaido and the Japan Alps.",
     highlights: ["Sapporo Snow Festival (Feb)", "Powder skiing in Niseko", "Illumination events Dec"],
     crowd: "Low",
-    crowdColor: "text-green-600",
+    crowdBadge: "bg-green-100 text-green-700",
     price: "Budget",
-    priceColor: "text-green-600",
+    priceBadge: "bg-green-100 text-green-700",
+    borderClass: "border-l-4 border-l-slate-400",
   },
 ];
 
@@ -178,16 +182,15 @@ export default function BestTimeToVisitJapanPage() {
           <h1 className="text-4xl font-semibold tracking-tight text-stone-900 md:text-5xl">
             Best time to visit Japan
           </h1>
-          <p className="max-w-3xl text-lg leading-8 text-stone-700">
-            Japan is rewarding year-round — cherry blossoms draw spring crowds, summer hosts the biggest festivals, autumn turns every hillside amber and crimson, and winter opens up the best powder skiing on earth. Each season has a distinct trade-off between weather, crowds, and cost.
-          </p>
           <p className="text-sm text-stone-500">By Yiyan · Last reviewed: March 2026</p>
           <img
             src="https://images.unsplash.com/photo-1522383225653-ed111181a951?w=1200&q=80"
             alt="Cherry blossoms in Japan"
-            className="w-full rounded-2xl object-cover"
-            style={{ maxHeight: 420 }}
+            className="w-full rounded-2xl h-64 md:h-96 object-cover"
           />
+          <p className="max-w-3xl text-lg leading-8 text-stone-700">
+            Japan is rewarding year-round — cherry blossoms draw spring crowds, summer hosts the biggest festivals, autumn turns every hillside amber and crimson, and winter opens up the best powder skiing on earth. Each season has a distinct trade-off between weather, crowds, and cost.
+          </p>
         </section>
 
         {/* Season Cards */}
@@ -195,7 +198,7 @@ export default function BestTimeToVisitJapanPage() {
           <h2 className="text-2xl font-semibold text-stone-900">Japan by season</h2>
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {seasons.map((s) => (
-              <Card key={s.name} className="border-stone-200 bg-white/85 shadow-sm">
+              <Card key={s.name} className={`border-stone-200 bg-white/85 shadow-sm ${s.borderClass}`}>
                 <CardHeader className="pb-3">
                   <CardTitle className="flex items-center gap-2 text-lg">
                     <span>{s.emoji}</span> {s.name}
@@ -209,14 +212,12 @@ export default function BestTimeToVisitJapanPage() {
                       <li key={h}>• {h}</li>
                     ))}
                   </ul>
-                  <div className="flex flex-col gap-1 border-t border-stone-100 pt-3 text-xs">
-                    <span>
-                      Crowds:{" "}
-                      <span className={`font-semibold ${s.crowdColor}`}>{s.crowd}</span>
+                  <div className="flex flex-wrap gap-2 border-t border-stone-100 pt-3">
+                    <span className={`inline-flex items-center rounded-full px-2 py-0.5 text-xs font-medium ${s.crowdBadge}`}>
+                      {s.crowd} crowds
                     </span>
-                    <span>
-                      Price:{" "}
-                      <span className={`font-semibold ${s.priceColor}`}>{s.price}</span>
+                    <span className={`inline-flex items-center rounded-full px-2 py-0.5 text-xs font-medium ${s.priceBadge}`}>
+                      {s.price}
                     </span>
                   </div>
                 </CardContent>
@@ -280,7 +281,7 @@ export default function BestTimeToVisitJapanPage() {
 
         {/* FAQ */}
         <section className="space-y-4">
-          <h2 className="text-2xl font-semibold text-stone-900">Frequently asked questions</h2>
+          <h2 className="text-2xl font-semibold text-stone-900">Good to know</h2>
           <Card className="border-stone-200 bg-white/85 shadow-sm">
             <CardContent className="space-y-3 pt-6">
               <h3 className="font-semibold text-stone-900">What about typhoon season?</h3>
