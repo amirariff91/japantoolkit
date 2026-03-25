@@ -11,6 +11,9 @@ export function SiteHeader() {
           <Link className="transition hover:text-stone-950" href="/tools">
             Tools
           </Link>
+          <Link className="transition hover:text-stone-950" href="/guides">
+            Guides
+          </Link>
           <Link className="transition hover:text-stone-950" href="/itinerary">
             Itineraries
           </Link>
