@@ -2,8 +2,15 @@
 const nextConfig = {
   output: 'standalone',
   eslint: {
-    // Allow img tags without next/image — external URLs not configured in domains
     ignoreDuringBuilds: false,
+  },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+      },
+    ],
   },
 };
 

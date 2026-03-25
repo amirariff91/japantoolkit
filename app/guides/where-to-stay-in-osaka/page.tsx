@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 import { Badge } from "@/components/ui/badge";
@@ -58,7 +59,7 @@ const neighbourhoods = [
   },
   {
     name: "Tennoji",
-    vibe: "Underrated local neighbourhood — Tennoji Zoo, Shinsekai retro food district, and Abeno Harukas (Japan's second-tallest building).",
+    vibe: "Underrated local neighbourhood — Tennoji Zoo, Shinsekai retro food district, and Abeno Harukas (Japan's tallest building at 300m).",
     bestFor: ["Budget", "Local feel", "Off the beaten path"],
     budget: "¥3,500 – ¥13,000",
     transport: "★★★★☆",
@@ -67,6 +68,7 @@ const neighbourhoods = [
   },
 ];
 
+// TODO: Replace AFFILIATE_ID_HERE with real Klook affiliate ID before going live
 const klookCTAs = [
   {
     label: "Osaka Amazing Pass (1 or 2 day)",
@@ -151,11 +153,14 @@ export default function WhereToStayInOsakaPage() {
             Where to stay in Osaka: neighbourhood guide
           </h1>
           <p className="text-sm text-stone-500">By Yiyan · Last reviewed: March 2026</p>
-          <img
-            src="https://images.unsplash.com/photo-1590559899731-a382839e5549?w=1200&q=80"
-            alt="Dotonbori canal in Osaka at night"
-            className="w-full rounded-2xl h-64 md:h-96 object-cover"
-          />
+          <div className="relative h-64 w-full overflow-hidden rounded-2xl md:h-96">
+            <Image
+              src="https://images.unsplash.com/photo-1590559899731-a382839e5549?w=1200&q=80"
+              alt="Dotonbori canal in Osaka at night"
+              fill
+              className="object-cover"
+            />
+          </div>
           <p className="max-w-3xl text-lg leading-8 text-stone-700">
             Osaka is far more manageable than Tokyo — the metro is clean, the city is compact, and most visitors base themselves in one of five key areas. The choice mostly comes down to food access, budget, and whether you&apos;re planning day trips to Kyoto or Hiroshima.
           </p>

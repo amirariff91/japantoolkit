@@ -38,6 +38,18 @@ const guides = [
     description: "5 Osaka neighbourhoods compared — Namba, Shinsaibashi, Umeda, Shin-Osaka, and Tennoji.",
     detail: "Budget ranges, transport access · Best areas for food, nightlife, and day trips",
   },
+  {
+    href: "/guides/cash-and-currency-in-japan",
+    title: "Cash & currency in Japan",
+    description: "Where to get yen, how 7-Eleven ATMs work, when cards are accepted, and how IC cards like Suica save time.",
+    detail: "ATM guide · IC cards · Credit card tips · Tipping rules",
+  },
+  {
+    href: "/guides/japan-trip-checklist",
+    title: "Japan trip checklist",
+    description: "A comprehensive pre-trip checklist — visas, money, transport cards, phone data, packing, and day-1 logistics.",
+    detail: "6 checklist sections · Free printable PDF · Day-1 prep guide",
+  },
 ];
 
 export default function GuidesHubPage() {

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 import { Badge } from "@/components/ui/badge";
@@ -85,6 +86,7 @@ const neighbourhoods = [
   },
 ];
 
+// TODO: Replace AFFILIATE_ID_HERE with real Klook affiliate ID before going live
 const klookCTAs = [
   {
     label: "Tokyo Skytree Skip-the-Line Ticket",
@@ -174,11 +176,14 @@ export default function WhereToStayInTokyoPage() {
             Where to stay in Tokyo: neighbourhood guide
           </h1>
           <p className="text-sm text-stone-500">By Yiyan · Last reviewed: March 2026</p>
-          <img
-            src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=80"
-            alt="Tokyo city skyline at night"
-            className="w-full rounded-2xl h-64 md:h-96 object-cover"
-          />
+          <div className="relative h-64 w-full overflow-hidden rounded-2xl md:h-96">
+            <Image
+              src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=80"
+              alt="Tokyo city skyline at night"
+              fill
+              className="object-cover"
+            />
+          </div>
           <p className="max-w-3xl text-lg leading-8 text-stone-700">
             Tokyo is enormous — 23 wards, 14 million people, and dozens of distinct neighbourhoods, each with a different personality. The right base depends on your travel style, budget, and which parts of the city you plan to spend the most time in.
           </p>

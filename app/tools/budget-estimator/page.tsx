@@ -79,7 +79,7 @@ const faqSchema = {
       name: "Should I budget in yen or USD for Japan?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Budget in yen first, then convert. Japanese prices are quoted in yen, and the exchange rate fluctuates. As of 2025, ¥1 is roughly $0.0065 USD (about ¥150 per $1). Cash is widely used in Japan — have yen on hand. 7-Eleven and Japan Post ATMs reliably accept foreign cards.",
+        text: "Budget in yen first, then convert. Japanese prices are quoted in yen, and the exchange rate fluctuates. As of 2026, ¥1 is roughly $0.0065 USD (about ¥150 per $1). Cash is widely used in Japan — have yen on hand. 7-Eleven and Japan Post ATMs reliably accept foreign cards.",
       },
     },
   ],
@@ -118,7 +118,7 @@ export default function BudgetEstimatorPage() {
             },
             {
               q: "Should I budget in yen or USD?",
-              a: "Budget in yen first. As of 2025, roughly ¥150 per $1 USD. Carry cash — 7-Eleven and Japan Post ATMs accept most foreign cards reliably.",
+              a: "Budget in yen first. As of 2026, roughly ¥150 per $1 USD. Carry cash — 7-Eleven and Japan Post ATMs accept most foreign cards reliably.",
             },
           ].map(({ q, a }) => (
             <div key={q} className="rounded-2xl border border-stone-200 bg-white/85 p-5">

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 import { Badge } from "@/components/ui/badge";
@@ -93,6 +94,7 @@ const months = [
   { month: "Dec", temp: "3–12 °C", crowd: "Low–Medium", event: "Winter illuminations" },
 ];
 
+// TODO: Replace AFFILIATE_ID_HERE with real Klook affiliate ID before going live
 const klookCTAs = [
   {
     label: "Cherry Blossom Boat Tour – Tokyo",
@@ -183,11 +185,14 @@ export default function BestTimeToVisitJapanPage() {
             Best time to visit Japan
           </h1>
           <p className="text-sm text-stone-500">By Yiyan · Last reviewed: March 2026</p>
-          <img
-            src="https://images.unsplash.com/photo-1522383225653-ed111181a951?w=1200&q=80"
-            alt="Cherry blossoms in Japan"
-            className="w-full rounded-2xl h-64 md:h-96 object-cover"
-          />
+          <div className="relative h-64 w-full overflow-hidden rounded-2xl md:h-96">
+            <Image
+              src="https://images.unsplash.com/photo-1522383225653-ed111181a951?w=1200&q=80"
+              alt="Cherry blossoms in Japan"
+              fill
+              className="object-cover"
+            />
+          </div>
           <p className="max-w-3xl text-lg leading-8 text-stone-700">
             Japan is rewarding year-round — cherry blossoms draw spring crowds, summer hosts the biggest festivals, autumn turns every hillside amber and crimson, and winter opens up the best powder skiing on earth. Each season has a distinct trade-off between weather, crowds, and cost.
           </p>
@@ -201,7 +206,7 @@ export default function BestTimeToVisitJapanPage() {
               <Card key={s.name} className={`border-stone-200 bg-white/85 shadow-sm ${s.borderClass}`}>
                 <CardHeader className="pb-3">
                   <CardTitle className="flex items-center gap-2 text-lg">
-                    <span>{s.emoji}</span> {s.name}
+                    <span aria-hidden="true">{s.emoji}</span> {s.name}
                   </CardTitle>
                   <p className="text-sm text-stone-500">{s.months}</p>
                 </CardHeader>
