@@ -266,6 +266,13 @@ export default function CashAndCurrencyPage() {
               </p>
             </CardContent>
           </Card>
+          <p className="text-sm text-stone-600">
+            Want the full picture?{" "}
+            <Link href="/guides/ic-card-japan" className="underline underline-offset-4 text-amber-700 hover:text-amber-800">
+              Read the IC card guide →
+            </Link>{" "}
+            Suica vs Pasmo vs ICOCA, Mobile Suica setup on iPhone, deposit rules, and where IC cards don&apos;t work.
+          </p>
         </section>
 
         {/* Credit Cards */}

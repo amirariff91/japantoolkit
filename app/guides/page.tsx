@@ -50,6 +50,18 @@ const guides = [
     description: "A comprehensive pre-trip checklist — visas, money, transport cards, phone data, packing, and day-1 logistics.",
     detail: "6 checklist sections · Free printable PDF · Day-1 prep guide",
   },
+  {
+    href: "/guides/ic-card-japan",
+    title: "IC cards in Japan",
+    description: "Suica vs Pasmo vs ICOCA — which one to get, how to top up, deposit rules, and Mobile Suica on iPhone.",
+    detail: "Card comparison table · Mobile Suica setup · Where it works / doesn't",
+  },
+  {
+    href: "/guides/japan-food-guide",
+    title: "Japan food guide",
+    description: "Must-eat dishes across Tokyo and Osaka, halal dining options, food budget tiers, and a Japanese vocabulary card.",
+    detail: "14 essential dishes · Tokyo & Osaka spots · Halal section · Budget guide",
+  },
 ];
 
 export default function GuidesHubPage() {

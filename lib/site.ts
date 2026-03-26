@@ -40,3 +40,12 @@ export const tools = [
 export { itineraryList };
 
 export const itinerarySlugs = itineraryList.map((item) => item.slug);
+
+export const guides = [
+  { slug: "best-time-to-visit-japan", lastModified: "2026-03-20" },
+  { slug: "where-to-stay-in-tokyo", lastModified: "2026-03-22" },
+  { slug: "where-to-stay-in-osaka", lastModified: "2026-03-22" },
+  { slug: "cash-and-currency-in-japan", lastModified: "2026-03-25" },
+  { slug: "japan-trip-checklist", lastModified: "2026-03-25" },
+  { slug: "japan-food-guide", lastModified: "2026-03-26" },
+];

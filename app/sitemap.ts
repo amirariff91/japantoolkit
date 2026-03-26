@@ -1,21 +1,45 @@
 import type { MetadataRoute } from "next";
 
-import { itineraryList, siteConfig, tools } from "@/lib/site";
+import { guides, itineraryList, siteConfig, tools } from "@/lib/site";
+
+const STATIC_PAGES: Array<{ route: string; lastModified: string; priority: number }> = [
+  { route: "", lastModified: "2026-03-26", priority: 1 },
+  { route: "/tools", lastModified: "2026-03-26", priority: 0.9 },
+  { route: "/itinerary", lastModified: "2026-03-26", priority: 0.9 },
+  { route: "/guides", lastModified: "2026-03-26", priority: 0.9 },
+  { route: "/about", lastModified: "2026-03-20", priority: 0.5 },
+  { route: "/contact", lastModified: "2026-03-20", priority: 0.5 },
+  { route: "/privacy", lastModified: "2026-03-20", priority: 0.3 },
+];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticRoutes = ["", "/tools", "/itinerary", "/guides", "/about", "/contact", "/privacy"];
-  const toolRoutes = tools.map((tool) => tool.href);
-  const itineraryRoutes = itineraryList.map((itinerary) => `/itinerary/${itinerary.slug}`);
-  const guideRoutes = [
-    "/guides/best-time-to-visit-japan",
-    "/guides/where-to-stay-in-tokyo",
-    "/guides/where-to-stay-in-osaka",
-  ];
-
-  return [...staticRoutes, ...toolRoutes, ...itineraryRoutes, ...guideRoutes].map((route) => ({
+  const staticEntries = STATIC_PAGES.map(({ route, lastModified, priority }) => ({
     url: `${siteConfig.url}${route}`,
-    lastModified: new Date(),
-    changeFrequency: route.includes("/tools/") || route.includes("/itinerary/") ? "weekly" : "monthly",
-    priority: route === "" ? 1 : 0.8,
+    lastModified: new Date(lastModified),
+    changeFrequency: "monthly" as const,
+    priority,
   }));
+
+  const toolEntries = tools.map((tool) => ({
+    url: `${siteConfig.url}${tool.href}`,
+    lastModified: new Date("2026-03-26"),
+    changeFrequency: "weekly" as const,
+    priority: 0.85,
+  }));
+
+  const itineraryEntries = itineraryList.map((itinerary) => ({
+    url: `${siteConfig.url}/itinerary/${itinerary.slug}`,
+    lastModified: new Date("2026-03-26"),
+    changeFrequency: "weekly" as const,
+    priority: 0.8,
+  }));
+
+  const guideEntries = guides.map((guide) => ({
+    url: `${siteConfig.url}/guides/${guide.slug}`,
+    lastModified: new Date(guide.lastModified),
+    changeFrequency: "monthly" as const,
+    priority: 0.8,
+  }));
+
+  return [...staticEntries, ...toolEntries, ...itineraryEntries, ...guideEntries];
 }

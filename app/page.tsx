@@ -5,6 +5,7 @@ import { ArrowRight, Calculator, Map, Smartphone } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { EmailCaptureForm } from "@/components/email-capture-form";
 import { itineraryList, tools } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -155,6 +156,25 @@ export default function HomePage() {
               </CardContent>
             </Card>
           ))}
+        </div>
+      </section>
+
+      {/* Email lead magnet */}
+      <section className="rounded-[2rem] border border-amber-200 bg-[linear-gradient(135deg,rgba(255,251,235,0.95),rgba(255,237,213,0.85))] px-6 py-10 md:px-10">
+        <div className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
+          <div className="max-w-xl space-y-3">
+            <Badge className="bg-amber-700 text-white hover:bg-amber-700">Free</Badge>
+            <h2 className="text-3xl font-semibold tracking-tight text-stone-900">
+              Free Japan Trip Checklist
+            </h2>
+            <p className="text-stone-700 leading-7">
+              Everything you need to plan your trip — in one printable checklist. Free.
+            </p>
+          </div>
+          <div className="max-w-md w-full space-y-3">
+            <EmailCaptureForm source="homepage" />
+            <p className="text-xs text-stone-500">No spam. Just the checklist, once. <Link href="/guides/japan-trip-checklist" className="underline underline-offset-4 hover:text-stone-700">Preview the checklist →</Link></p>
+          </div>
         </div>
       </section>
 
