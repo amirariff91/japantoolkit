@@ -163,6 +163,36 @@ export default function ItineraryDetailPage({ params }: ItineraryPageProps) {
         </Card>
       </div>
 
+      {/* Planning resources */}
+      <div className="space-y-4">
+        <div>
+          <p className="text-xs font-medium uppercase tracking-[0.18em] text-stone-400">Plan your trip</p>
+          <h2 className="mt-1 text-2xl font-semibold text-stone-900">Essential guides for this itinerary</h2>
+        </div>
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <a href="/guides/japan-food-guide" className="rounded-2xl border border-stone-200 bg-white/85 p-4 space-y-2 hover:border-amber-300 transition-colors">
+            <p className="font-semibold text-stone-900">Japan Food Guide</p>
+            <p className="text-sm leading-6 text-stone-600">What to eat, where to find it, and halal options in Tokyo &amp; Osaka.</p>
+            <p className="text-xs font-medium text-amber-700">Read the guide →</p>
+          </a>
+          <a href="/guides/cash-and-currency-in-japan" className="rounded-2xl border border-stone-200 bg-white/85 p-4 space-y-2 hover:border-amber-300 transition-colors">
+            <p className="font-semibold text-stone-900">Cash &amp; Currency</p>
+            <p className="text-sm leading-6 text-stone-600">How much cash to carry, where to withdraw yen, and whether cards are accepted.</p>
+            <p className="text-xs font-medium text-amber-700">Read the guide →</p>
+          </a>
+          <a href="/guides/ic-card-japan" className="rounded-2xl border border-stone-200 bg-white/85 p-4 space-y-2 hover:border-amber-300 transition-colors">
+            <p className="font-semibold text-stone-900">IC Card Guide</p>
+            <p className="text-sm leading-6 text-stone-600">Suica vs Pasmo vs ICOCA — which one to get and how to top it up.</p>
+            <p className="text-xs font-medium text-amber-700">Read the guide →</p>
+          </a>
+          <a href="/tools/rail-pass-calculator" className="rounded-2xl border border-stone-200 bg-white/85 p-4 space-y-2 hover:border-amber-300 transition-colors">
+            <p className="font-semibold text-stone-900">Rail Pass Calculator</p>
+            <p className="text-sm leading-6 text-stone-600">Check whether a JR Pass saves you money on your specific route.</p>
+            <p className="text-xs font-medium text-amber-700">Try the calculator →</p>
+          </a>
+        </div>
+      </div>
+
       {/* TODO: Replace AFFILIATE_ID_HERE with your Klook affiliate ID from affiliate.klook.com */}
       <div className="space-y-4">
         <div>
