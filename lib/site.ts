@@ -49,4 +49,5 @@ export const guides = [
   { slug: "japan-trip-checklist", lastModified: "2026-03-25" },
   { slug: "japan-food-guide", lastModified: "2026-03-26" },
   { slug: "japan-visa-guide", lastModified: "2026-03-26" },
+  { slug: "ic-card-japan", lastModified: "2026-03-26" },
 ];

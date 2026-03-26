@@ -29,13 +29,17 @@ export async function POST(req: NextRequest) {
       unsubscribed: false,
     });
 
-    // 409 = already exists — treat as success
-    if (contactRes.error && (contactRes.error as { statusCode?: number }).statusCode !== 409) {
+    // 409 = already exists — treat as success but skip welcome email (already sent)
+    if (contactRes.error) {
+      const statusCode = (contactRes.error as { statusCode?: number }).statusCode;
+      if (statusCode === 409) {
+        return NextResponse.json({ success: true });
+      }
       console.error("Resend contact error:", contactRes.error);
       return NextResponse.json({ error: "Failed to subscribe. Please try again." }, { status: 500 });
     }
 
-    // Send welcome email
+    // Send welcome email (new subscribers only)
     const htmlEmail = `<!DOCTYPE html>
 <html lang="en">
 <head>
