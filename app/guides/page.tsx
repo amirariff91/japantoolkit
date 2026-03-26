@@ -62,6 +62,12 @@ const guides = [
     description: "Must-eat dishes across Tokyo and Osaka, halal dining options, food budget tiers, and a Japanese vocabulary card.",
     detail: "14 essential dishes · Tokyo & Osaka spots · Halal section · Budget guide",
   },
+  {
+    href: "/guides/japan-visa-guide",
+    title: "Japan visa guide",
+    description: "Visa-free entry rules for Malaysia (15 days), Singapore, US, UK & Australia — plus what to prepare and how to use Visit Japan Web.",
+    detail: "Per-country stay limits · Entry requirements · Visit Japan Web · Last reviewed March 2026",
+  },
 ];
 
 export default function GuidesHubPage() {
