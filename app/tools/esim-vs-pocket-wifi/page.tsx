@@ -56,11 +56,83 @@ const breadcrumbSchema = {
   ],
 };
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What is an eSIM and how does it work in Japan?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "An eSIM is a digital SIM card embedded in your phone. You purchase a Japan data plan online, scan a QR code, and your phone connects to a Japanese carrier network — no physical SIM card needed.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Will my phone work with a Japan eSIM?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Your phone must be SIM-unlocked and eSIM-capable. Most recent iPhones (XS and later) and modern Android phones (2019+) support eSIM. Check your settings or ask your carrier before buying.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is pocket Wi-Fi better than eSIM for Japan?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "It depends. Pocket Wi-Fi is better for groups (3+ people) sharing one connection or for laptops and devices without eSIM support. eSIM is better for solo or couple travelers who want zero extra hardware.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How fast is eSIM data speed in Japan?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Most Japan eSIM plans run on NTT Docomo, SoftBank, or AU networks — the same carriers used by locals. In cities like Tokyo and Osaka, speeds are typically 20–100 Mbps, fast enough for HD streaming, video calls, and navigation.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can I use eSIM and pocket Wi-Fi at the same time?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. You can run both simultaneously — eSIM as your primary data and pocket Wi-Fi as a backup or shared hotspot. Most phones allow only one active SIM or eSIM data connection at a time, so you would need to switch manually.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How do I return a pocket Wi-Fi rental in Japan?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Most providers include a prepaid return envelope. Drop the device at any convenience store (7-Eleven, Lawson, FamilyMart) or airport postal counter before your departure flight. Late returns may incur extra charges.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do eSIMs work on arrival at Tokyo Narita or Haneda airport?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Once you scan the QR code and activate the eSIM plan (usually takes 5 minutes), it works immediately on arrival. There is no need to wait for a physical SIM or find a rental counter.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How much does eSIM data cost for Japan?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Plans typically range from USD 10–30 for 5–15 GB valid for 15–30 days, depending on the provider and data volume. Pocket Wi-Fi rental costs USD 5–10 per day but covers multiple devices.",
+      },
+    },
+  ],
+};
+
 export default function EsimVsPocketWifiPage() {
   return (
     <div className="space-y-10 py-10">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       <section className="space-y-4">
         <Badge className="bg-amber-700 text-white hover:bg-amber-700">Tool</Badge>
@@ -119,6 +191,51 @@ export default function EsimVsPocketWifiPage() {
 
         <ConnectivityQuiz />
       </div>
+
+      <section className="space-y-4">
+        <h2 className="text-2xl font-semibold text-stone-900">Common questions</h2>
+        <div className="space-y-4">
+          {[
+            {
+              q: "What is an eSIM and how does it work in Japan?",
+              a: "An eSIM is a digital SIM card embedded in your phone. You purchase a Japan data plan online, scan a QR code, and your phone connects to a Japanese carrier network — no physical SIM card needed.",
+            },
+            {
+              q: "Will my phone work with a Japan eSIM?",
+              a: "Your phone must be SIM-unlocked and eSIM-capable. Most recent iPhones (XS and later) and modern Android phones (2019+) support eSIM. Check your settings or ask your carrier before buying.",
+            },
+            {
+              q: "Is pocket Wi-Fi better than eSIM for Japan?",
+              a: "It depends. Pocket Wi-Fi is better for groups (3+ people) sharing one connection or for laptops without eSIM support. eSIM is better for solo or couple travelers who want zero extra hardware.",
+            },
+            {
+              q: "How fast is eSIM data speed in Japan?",
+              a: "Most Japan eSIM plans run on NTT Docomo, SoftBank, or AU networks. In cities like Tokyo and Osaka, speeds are typically 20–100 Mbps — fast enough for HD streaming, video calls, and navigation.",
+            },
+            {
+              q: "Can I use eSIM and pocket Wi-Fi at the same time?",
+              a: "Yes, but most phones allow only one active data connection at a time. You would need to switch manually between them. Running both simultaneously is possible if one is used for hotspot sharing only.",
+            },
+            {
+              q: "How do I return a pocket Wi-Fi rental in Japan?",
+              a: "Most providers include a prepaid return envelope. Drop the device at any convenience store (7-Eleven, Lawson, FamilyMart) or airport postal counter before your departure. Late returns may incur extra charges.",
+            },
+            {
+              q: "Do eSIMs work on arrival at Tokyo Narita or Haneda?",
+              a: "Yes. Once you scan the QR code and activate the plan, it works immediately on arrival — no physical SIM, no rental counter, no waiting.",
+            },
+            {
+              q: "How much does eSIM data cost for Japan?",
+              a: "Plans typically range from USD 10–30 for 5–15 GB valid for 15–30 days. Pocket Wi-Fi rental costs USD 5–10 per day but covers multiple devices.",
+            },
+          ].map(({ q, a }) => (
+            <div key={q} className="rounded-2xl border border-stone-200 bg-white/85 p-5">
+              <p className="font-semibold text-stone-900">{q}</p>
+              <p className="mt-2 text-sm leading-6 text-stone-600">{a}</p>
+            </div>
+          ))}
+        </div>
+      </section>
 
       <section className="grid gap-5 md:grid-cols-3">
         <Card className="border-stone-200 bg-white/85">
