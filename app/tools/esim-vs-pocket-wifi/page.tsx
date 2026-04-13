@@ -97,7 +97,7 @@ const faqSchema = {
       name: "Can I use eSIM and pocket Wi-Fi at the same time?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. You can run both simultaneously — eSIM as your primary data and pocket Wi-Fi as a backup or shared hotspot. Most phones allow only one active SIM or eSIM data connection at a time, so you would need to switch manually.",
+        text: "You can keep both active and switch between them manually. Your phone uses one data connection at a time — so you would turn off one to use the other. Running both as a simultaneous hotspot is possible but drains battery faster.",
       },
     },
     {
@@ -105,12 +105,33 @@ const faqSchema = {
       name: "How do I return a pocket Wi-Fi rental in Japan?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Most providers include a prepaid return envelope. Drop the device at any convenience store (7-Eleven, Lawson, FamilyMart) or airport postal counter before your departure flight. Late returns may incur extra charges.",
+        text: "Most providers give you a prepaid return envelope or a designated drop point. Common options include convenience store counters (ask staff at the register) and airport postal counters before your departure flight. Check your provider is specific instructions — late returns usually incur extra charges.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Will my WhatsApp or iMessage still work with a Japan eSIM?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. WhatsApp and iMessage use your existing account and internet connection — they do not depend on a local phone number. As long as your eSIM data is active, messaging apps work the same way they do at home.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Does a Japan eSIM give me a local phone number for calls and texts?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Most Japan eSIM plans are data-only — no local phone number is included. You can make calls over data using WhatsApp, LINE, or Skype. If you need a local Japanese phone number for calls or SMS, consider a voice-capable plan or a physical SIM from a Japanese carrier.",
       },
     },
     {
       "@type": "Question",
       name: "Do eSIMs work on arrival at Tokyo Narita or Haneda airport?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Once you scan the QR code and activate the eSIM plan (usually takes 5 minutes), it works immediately on arrival. There is no need to wait for a physical SIM or find a rental counter.",
+      },
+    },
       acceptedAnswer: {
         "@type": "Answer",
         text: "Yes. Once you scan the QR code and activate the eSIM plan (usually takes 5 minutes), it works immediately on arrival. There is no need to wait for a physical SIM or find a rental counter.",
@@ -214,11 +235,19 @@ export default function EsimVsPocketWifiPage() {
             },
             {
               q: "Can I use eSIM and pocket Wi-Fi at the same time?",
-              a: "Yes, but most phones allow only one active data connection at a time. You would need to switch manually between them. Running both simultaneously is possible if one is used for hotspot sharing only.",
+              a: "You can keep both active and switch between them manually. Your phone uses one data connection at a time — so you would turn off one to use the other. Running both as a simultaneous hotspot is possible but drains battery faster.",
             },
             {
               q: "How do I return a pocket Wi-Fi rental in Japan?",
-              a: "Most providers include a prepaid return envelope. Drop the device at any convenience store (7-Eleven, Lawson, FamilyMart) or airport postal counter before your departure. Late returns may incur extra charges.",
+              a: "Most providers give you a prepaid return envelope or a designated drop point. Common options include convenience store counters (ask staff at the register) and airport postal counters before your departure flight. Check your provider is specific instructions — late returns usually incur extra charges.",
+            },
+            {
+              q: "Will my WhatsApp or iMessage still work with a Japan eSIM?",
+              a: "Yes. WhatsApp and iMessage use your existing account and internet connection — they do not depend on a local phone number. As long as your eSIM data is active, messaging apps work the same way they do at home.",
+            },
+            {
+              q: "Does a Japan eSIM give me a local phone number for calls and texts?",
+              a: "Most Japan eSIM plans are data-only — no local phone number is included. You can make calls over data using WhatsApp, LINE, or Skype. If you need a local Japanese phone number for calls or SMS (e.g., for hotel bookings), consider a voice-capable plan or a physical SIM from a Japanese carrier.",
             },
             {
               q: "Do eSIMs work on arrival at Tokyo Narita or Haneda?",

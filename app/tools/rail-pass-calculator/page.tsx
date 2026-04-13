@@ -69,15 +69,20 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      name: "Can I use the JR Pass on the Shinkansen?",
+      name: "Which Shinkansen are covered, and can I use it on the Nozomi?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. The nationwide JR Pass covers most Shinkansen lines including Tokaido, Sanyo, Tohoku, and Hokuriku. The Nozomi and Mizuho express services on the Tokaido and Sanyo Shinkansen are excluded — you must take Hikari or Sakura trains instead.",
+        text: "Most Shinkansen lines are covered by the JR Pass — but the Nozomi (Tokaido/Sanyo) and Mizuho (Sanyo) require a separate supplement ticket even with an active pass. Use Hikari or Sakura trains at no extra cost. Regional trains, subways, and private railways are not covered.",
       },
     },
     {
       "@type": "Question",
       name: "What routes does the JR Pass cover?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The JR Pass covers all JR-operated trains nationwide including most Shinkansen, JR local and rapid trains, JR buses on selected routes, and the JR ferry to Miyajima. It does not cover private railways, subway lines, or non-JR buses.",
+      },
+    }
       acceptedAnswer: {
         "@type": "Answer",
         text: "The JR Pass covers all JR-operated trains nationwide including most Shinkansen, JR local and rapid trains, JR buses on selected routes, and the JR ferry to Miyajima. It does not cover private railways, subway lines, or non-JR buses.",
@@ -101,14 +106,6 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      name: "Can I use the JR Pass on the Nozomi bullet train?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "No. The JR Pass does not cover Nozomi trains on the Tokaido and Sanyo Shinkansen, or Mizuho trains on the Sanyo Shinkansen. You must take Hikari (Tokaido), Sakura (Sanyo), or other non-express shinkansen instead. The Nozomi saves about 30 minutes per leg but is not covered.",
-      },
-    },
-    {
-      "@type": "Question",
       name: "Is the JR Pass valid on all trains in Japan?",
       acceptedAnswer: {
         "@type": "Answer",
@@ -120,12 +117,25 @@ const faqSchema = {
       name: "Can tourists buy the JR Pass?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes, but only foreign tourists visiting Japan as temporary visitors (tourist visa status). Japanese citizens or residents are not eligible for the tourist JR Pass. You must purchase an Exchange Order (voucher) from an authorised reseller before arriving in Japan, then exchange it for the actual pass at a JR office in Japan.",
+        text: "Only foreign tourists visiting Japan as temporary visitors are eligible. You can purchase an Exchange Order from an authorised reseller online before you travel, or buy directly through the official JR online shop (with some limitations). Exchange your voucher at a JR office at the airport or in major stations.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can I buy a JR Pass after I arrive in Japan?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. You can purchase a JR Pass after arrival in Japan through the official JR online shop or from resellers within the country, then exchange at a JR office. Prices may differ from overseas rates and some resellers charge a premium for in-Japan purchase.",
       },
     },
     {
       "@type": "Question",
       name: "How do I activate the JR Pass?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Present your Exchange Order and passport at a JR exchange office (major airports and stations like Tokyo/Kyoto Station). Choose your start date within 30 days — the pass is valid from that date.",
+      },
+    },
       acceptedAnswer: {
         "@type": "Answer",
         text: "Present your Exchange Order and passport at a JR Pass exchange office (usually found at major airports and train stations like Tokyo Station, Kyoto Station). The JR staff will activate your pass and you will choose a start date within 30 days of exchange. The pass is valid from the start date you choose.",
@@ -170,8 +180,8 @@ export default function RailPassCalculatorPage() {
               a: "The JR Pass is worth it if your shinkansen costs exceed the pass price within the 7-day window. It typically pays off for multi-city routes like Tokyo → Kyoto → Hiroshima.",
             },
             {
-              q: "Can I use the JR Pass on the Shinkansen?",
-              a: "Yes — most Shinkansen lines are covered. The Nozomi and Mizuho express services are excluded. Use Hikari or Sakura trains instead.",
+              q: "Which Shinkansen are covered, and can I use it on the Nozomi?",
+              a: "Most Shinkansen lines are covered by the JR Pass — but the Nozomi (Tokaido/Sanyo) and Mizuho (Sanyo) require a separate supplement ticket even with an active pass. Use Hikari or Sakura trains at no extra cost. Regional trains, subways, and private railways are not covered.",
             },
             {
               q: "What routes does the JR Pass cover?",
@@ -186,16 +196,16 @@ export default function RailPassCalculatorPage() {
               a: "Buy individual tickets if your trip is mostly within one region (e.g., just Tokyo and nearby day trips). Buy the JR Pass if you are making 3+ long-distance shinkansen trips across different cities in a week.",
             },
             {
-              q: "Can I use the JR Pass on the Nozomi bullet train?",
-              a: "No. The JR Pass does not cover Nozomi (Tokaido/Sanyo) or Mizuho (Sanyo) trains. You must take Hikari or Sakura instead. The Nozomi saves ~30 minutes per leg but is not covered.",
-            },
-            {
               q: "Is the JR Pass valid on all trains in Japan?",
               a: "No. It covers JR trains only. Private railways (Keio, Odakyu, Hankyu, Kintetsu) and subway lines in Tokyo, Osaka, and Kyoto are not included. Neither are most non-JR bus companies.",
             },
             {
               q: "Can tourists buy the JR Pass?",
-              a: "Only foreign tourists on temporary visitor status. Japanese citizens and residents are not eligible. Purchase an Exchange Order from an authorised reseller before arriving in Japan, then exchange it at a JR office.",
+              a: "Only foreign tourists visiting Japan as temporary visitors are eligible. You can purchase an Exchange Order from an authorised reseller online before you travel, or buy directly through the official JR online shop (with some limitations). Exchange your voucher at a JR office at the airport or in major stations.",
+            },
+            {
+              q: "Can I buy a JR Pass after I arrive in Japan?",
+              a: "Yes. You can purchase a JR Pass after arrival in Japan through the official JR online shop (with a valid credit card and passport), or buy an Exchange Order from resellers within Japan and exchange it at a JR office. Note: prices may differ from overseas rates and some resellers charge more for in-Japan purchase.",
             },
             {
               q: "How do I activate the JR Pass?",
