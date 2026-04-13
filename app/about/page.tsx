@@ -4,12 +4,12 @@ export const metadata: Metadata = {
   title: "About — Japan Toolkit",
   description:
     "Meet the people behind Japan Toolkit — two frequent Japan travelers building the practical trip-planning resource they wished existed.",
-  alternates: { canonical: "https://japantoolkit.com/about" },
+  alternates: { canonical: "https://japantoolkit.cepathosting.com/about" },
   openGraph: {
     title: "About — Japan Toolkit",
     description: "Meet the people behind Japan Toolkit — two frequent Japan travelers building the practical trip-planning resource they wished existed.",
-    url: "https://japantoolkit.com/about",
-    images: [{ url: "https://japantoolkit.com/opengraph-image", width: 1200, height: 630 }],
+    url: "https://japantoolkit.cepathosting.com/about",
+    images: [{ url: "https://japantoolkit.cepathosting.com/opengraph-image", width: 1200, height: 630 }],
   },
 };
 

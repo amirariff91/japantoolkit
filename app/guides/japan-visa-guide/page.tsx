@@ -11,12 +11,12 @@ export const metadata: Metadata = {
   title: "Japan Visa Guide 2026: Requirements for Malaysia, Singapore, US, UK & Australia",
   description:
     "Everything you need to know about visiting Japan visa-free: length of stay, passport validity, entry requirements, and what to prepare before you fly.",
-  alternates: { canonical: "https://japantoolkit.com/guides/japan-visa-guide" },
+  alternates: { canonical: "https://japantoolkit.cepathosting.com/guides/japan-visa-guide" },
   openGraph: {
     title: "Japan Visa Guide 2026: Visa-Free Rules for Malaysia, Singapore, US, UK & Australia | Japan Toolkit",
     description:
       "Everything you need to know about visiting Japan visa-free: length of stay, passport validity, entry requirements, and what to prepare before you fly.",
-    url: "https://japantoolkit.com/guides/japan-visa-guide",
+    url: "https://japantoolkit.cepathosting.com/guides/japan-visa-guide",
     images: [
       {
         url: "https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=1200&q=80",
@@ -128,17 +128,17 @@ const articleSchema = {
   datePublished: "2026-03-26",
   dateModified: "2026-03-26",
   author: { "@type": "Person", name: "Yiyan" },
-  publisher: { "@type": "Organization", name: "Japan Toolkit", url: "https://japantoolkit.com" },
-  mainEntityOfPage: { "@type": "WebPage", "@id": "https://japantoolkit.com/guides/japan-visa-guide" },
+  publisher: { "@type": "Organization", name: "Japan Toolkit", url: "https://japantoolkit.cepathosting.com" },
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://japantoolkit.cepathosting.com/guides/japan-visa-guide" },
 };
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://japantoolkit.com" },
-    { "@type": "ListItem", position: 2, name: "Guides", item: "https://japantoolkit.com/guides" },
-    { "@type": "ListItem", position: 3, name: "Japan Visa Guide", item: "https://japantoolkit.com/guides/japan-visa-guide" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://japantoolkit.cepathosting.com" },
+    { "@type": "ListItem", position: 2, name: "Guides", item: "https://japantoolkit.cepathosting.com/guides" },
+    { "@type": "ListItem", position: 3, name: "Japan Visa Guide", item: "https://japantoolkit.cepathosting.com/guides/japan-visa-guide" },
   ],
 };
 

@@ -10,12 +10,12 @@ export const metadata: Metadata = {
   title: "Best Time to Visit Japan (Month-by-Month Guide)",
   description:
     "Find the best time to visit Japan by season and month. Cherry blossoms in spring, autumn foliage, winter snow, and summer festivals — all compared for weather, crowds, and price.",
-  alternates: { canonical: "https://japantoolkit.com/guides/best-time-to-visit-japan" },
+  alternates: { canonical: "https://japantoolkit.cepathosting.com/guides/best-time-to-visit-japan" },
   openGraph: {
     title: "Best Time to Visit Japan (Month-by-Month Guide) | Japan Toolkit",
     description:
       "Find the best time to visit Japan by season and month. Cherry blossoms in spring, autumn foliage, winter snow, and summer festivals — all compared for weather, crowds, and price.",
-    url: "https://japantoolkit.com/guides/best-time-to-visit-japan",
+    url: "https://japantoolkit.cepathosting.com/guides/best-time-to-visit-japan",
     images: [{ url: "https://images.unsplash.com/photo-1522383225653-ed111181a951?w=1200&q=80", width: 1200, height: 630 }],
   },
 };
@@ -126,22 +126,22 @@ const articleSchema = {
   publisher: {
     "@type": "Organization",
     name: "Japan Toolkit",
-    url: "https://japantoolkit.com",
+    url: "https://japantoolkit.cepathosting.com",
   },
-  mainEntityOfPage: { "@type": "WebPage", "@id": "https://japantoolkit.com/guides/best-time-to-visit-japan" },
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://japantoolkit.cepathosting.com/guides/best-time-to-visit-japan" },
 };
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://japantoolkit.com" },
-    { "@type": "ListItem", position: 2, name: "Guides", item: "https://japantoolkit.com/guides" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://japantoolkit.cepathosting.com" },
+    { "@type": "ListItem", position: 2, name: "Guides", item: "https://japantoolkit.cepathosting.com/guides" },
     {
       "@type": "ListItem",
       position: 3,
       name: "Best Time to Visit Japan",
-      item: "https://japantoolkit.com/guides/best-time-to-visit-japan",
+      item: "https://japantoolkit.cepathosting.com/guides/best-time-to-visit-japan",
     },
   ],
 };

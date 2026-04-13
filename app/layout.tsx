@@ -75,20 +75,20 @@ export default function RootLayout({
             "@graph": [
               {
                 "@type": "WebSite",
-                "@id": "https://japantoolkit.com/#website",
-                "url": "https://japantoolkit.com",
+                "@id": "https://japantoolkit.cepathosting.com/#website",
+                "url": "https://japantoolkit.cepathosting.com",
                 "name": "Japan Toolkit",
                 "description": "Practical Japan trip planning tools and itineraries"
               },
               {
                 "@type": "Organization",
-                "@id": "https://japantoolkit.com/#organization",
+                "@id": "https://japantoolkit.cepathosting.com/#organization",
                 "name": "Japan Toolkit",
-                "url": "https://japantoolkit.com",
+                "url": "https://japantoolkit.cepathosting.com",
                 "email": "hello@japantoolkit.com",
                 "logo": {
                   "@type": "ImageObject",
-                  "url": "https://japantoolkit.com/opengraph-image",
+                  "url": "https://japantoolkit.cepathosting.com/opengraph-image",
                   "width": 1200,
                   "height": 630
                 },

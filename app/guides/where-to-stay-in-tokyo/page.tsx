@@ -10,12 +10,12 @@ export const metadata: Metadata = {
   title: "Where to Stay in Tokyo: Neighbourhood Guide",
   description:
     "Find the best neighbourhood to stay in Tokyo. Shinjuku, Shibuya, Asakusa, Ginza, Akihabara, Ueno, and Harajuku compared — vibes, prices, and who each area suits.",
-  alternates: { canonical: "https://japantoolkit.com/guides/where-to-stay-in-tokyo" },
+  alternates: { canonical: "https://japantoolkit.cepathosting.com/guides/where-to-stay-in-tokyo" },
   openGraph: {
     title: "Where to Stay in Tokyo: Neighbourhood Guide | Japan Toolkit",
     description:
       "Find the best neighbourhood to stay in Tokyo. Shinjuku, Shibuya, Asakusa, Ginza, Akihabara, Ueno, and Harajuku compared — vibes, prices, and who each area suits.",
-    url: "https://japantoolkit.com/guides/where-to-stay-in-tokyo",
+    url: "https://japantoolkit.cepathosting.com/guides/where-to-stay-in-tokyo",
     images: [{ url: "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=80", width: 1200, height: 630 }],
   },
 };
@@ -115,17 +115,17 @@ const articleSchema = {
   datePublished: "2026-03-01",
   dateModified: "2026-03-01",
   author: { "@type": "Person", name: "Yiyan" },
-  publisher: { "@type": "Organization", name: "Japan Toolkit", url: "https://japantoolkit.com" },
-  mainEntityOfPage: { "@type": "WebPage", "@id": "https://japantoolkit.com/guides/where-to-stay-in-tokyo" },
+  publisher: { "@type": "Organization", name: "Japan Toolkit", url: "https://japantoolkit.cepathosting.com" },
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://japantoolkit.cepathosting.com/guides/where-to-stay-in-tokyo" },
 };
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://japantoolkit.com" },
-    { "@type": "ListItem", position: 2, name: "Guides", item: "https://japantoolkit.com/guides" },
-    { "@type": "ListItem", position: 3, name: "Where to Stay in Tokyo", item: "https://japantoolkit.com/guides/where-to-stay-in-tokyo" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://japantoolkit.cepathosting.com" },
+    { "@type": "ListItem", position: 2, name: "Guides", item: "https://japantoolkit.cepathosting.com/guides" },
+    { "@type": "ListItem", position: 3, name: "Where to Stay in Tokyo", item: "https://japantoolkit.cepathosting.com/guides/where-to-stay-in-tokyo" },
   ],
 };
 

@@ -14,13 +14,13 @@ export const metadata: Metadata = {
   },
   description:
     "Plan Japan with practical tools and itinerary templates. Compare eSIM vs pocket Wi-Fi, check if the JR Pass pays off, and browse trip plans for families, solo travelers, anime fans, and first-timers.",
-  alternates: { canonical: "https://japantoolkit.com" },
+  alternates: { canonical: "https://japantoolkit.cepathosting.com" },
   openGraph: {
     title: "Japan Toolkit — Rail Pass, eSIM & Itinerary Planning Tools",
     description:
       "Plan Japan with practical tools and itinerary templates. Compare eSIM vs pocket Wi-Fi, check if the JR Pass pays off, and browse trip plans for families, solo travelers, anime fans, and first-timers.",
-    url: "https://japantoolkit.com",
-    images: [{ url: "https://japantoolkit.com/opengraph-image", width: 1200, height: 630 }],
+    url: "https://japantoolkit.cepathosting.com",
+    images: [{ url: "https://japantoolkit.cepathosting.com/opengraph-image", width: 1200, height: 630 }],
   },
 };
 

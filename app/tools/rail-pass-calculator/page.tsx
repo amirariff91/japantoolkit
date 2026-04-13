@@ -9,14 +9,14 @@ export const metadata: Metadata = {
   description:
     "Use this free JR Pass calculator to see if the Japan Rail Pass saves you money. Add your shinkansen routes and compare the total against the current pass price.",
   alternates: {
-    canonical: "https://japantoolkit.com/tools/rail-pass-calculator",
+    canonical: "https://japantoolkit.cepathosting.com/tools/rail-pass-calculator",
   },
   openGraph: {
     title: "JR Pass Calculator — Is the Japan Rail Pass Worth It?",
     description:
       "Use this free JR Pass calculator to see if the Japan Rail Pass saves you money. Add your shinkansen routes and compare the total against the current pass price.",
-    url: "https://japantoolkit.com/tools/rail-pass-calculator",
-    images: [{ url: "https://japantoolkit.com/opengraph-image", width: 1200, height: 630 }],
+    url: "https://japantoolkit.cepathosting.com/tools/rail-pass-calculator",
+    images: [{ url: "https://japantoolkit.cepathosting.com/opengraph-image", width: 1200, height: 630 }],
   },
 };
 
@@ -49,9 +49,9 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://japantoolkit.com" },
-    { "@type": "ListItem", position: 2, name: "Tools", item: "https://japantoolkit.com/tools" },
-    { "@type": "ListItem", position: 3, name: "JR Pass Calculator", item: "https://japantoolkit.com/tools/rail-pass-calculator" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://japantoolkit.cepathosting.com" },
+    { "@type": "ListItem", position: 2, name: "Tools", item: "https://japantoolkit.cepathosting.com/tools" },
+    { "@type": "ListItem", position: 3, name: "JR Pass Calculator", item: "https://japantoolkit.cepathosting.com/tools/rail-pass-calculator" },
   ],
 };
 

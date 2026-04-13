@@ -11,13 +11,13 @@ export const metadata: Metadata = {
   title: "Japan Travel Planning Tools",
   description:
     "Use Japan Toolkit calculators and comparison guides to plan rail costs, connectivity, and trip budgeting before you book flights or hotels.",
-  alternates: { canonical: "https://japantoolkit.com/tools" },
+  alternates: { canonical: "https://japantoolkit.cepathosting.com/tools" },
   openGraph: {
     title: "Japan Travel Planning Tools",
     description:
       "Use Japan Toolkit calculators and comparison guides to plan rail costs, connectivity, and trip budgeting before you book flights or hotels.",
-    url: "https://japantoolkit.com/tools",
-    images: [{ url: "https://japantoolkit.com/opengraph-image", width: 1200, height: 630 }],
+    url: "https://japantoolkit.cepathosting.com/tools",
+    images: [{ url: "https://japantoolkit.cepathosting.com/opengraph-image", width: 1200, height: 630 }],
   },
 };
 

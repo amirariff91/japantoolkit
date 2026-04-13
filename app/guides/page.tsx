@@ -9,13 +9,13 @@ export const metadata: Metadata = {
   title: "Japan Travel Guides",
   description:
     "Practical Japan travel guides — best time to visit, where to stay in Tokyo and Osaka, and more. Written from real trip experience.",
-  alternates: { canonical: "https://japantoolkit.com/guides" },
+  alternates: { canonical: "https://japantoolkit.cepathosting.com/guides" },
   openGraph: {
     title: "Japan Travel Guides | Japan Toolkit",
     description:
       "Practical Japan travel guides — best time to visit, where to stay in Tokyo and Osaka, and more. Written from real trip experience.",
-    url: "https://japantoolkit.com/guides",
-    images: [{ url: "https://japantoolkit.com/opengraph-image", width: 1200, height: 630 }],
+    url: "https://japantoolkit.cepathosting.com/guides",
+    images: [{ url: "https://japantoolkit.cepathosting.com/opengraph-image", width: 1200, height: 630 }],
   },
 };
 

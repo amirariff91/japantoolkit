@@ -10,12 +10,12 @@ export const metadata: Metadata = {
   title: "Cash & Currency in Japan: What You Actually Need to Know",
   description:
     "Japan is still heavily cash-based. Learn where to get yen, how 7-Eleven ATMs work, whether your card is accepted, and how IC cards like Suica save you time every day.",
-  alternates: { canonical: "https://japantoolkit.com/guides/cash-and-currency-in-japan" },
+  alternates: { canonical: "https://japantoolkit.cepathosting.com/guides/cash-and-currency-in-japan" },
   openGraph: {
     title: "Cash & Currency in Japan: What You Actually Need to Know | Japan Toolkit",
     description:
       "Japan is still heavily cash-based. Learn where to get yen, how 7-Eleven ATMs work, whether your card is accepted, and how IC cards like Suica save you time every day.",
-    url: "https://japantoolkit.com/guides/cash-and-currency-in-japan",
+    url: "https://japantoolkit.cepathosting.com/guides/cash-and-currency-in-japan",
     images: [{ url: "https://images.unsplash.com/photo-1601987077677-5346c0c57d3f?w=1200&q=80", width: 1200, height: 630 }],
   },
 };
@@ -114,17 +114,17 @@ const articleSchema = {
   datePublished: "2026-03-25",
   dateModified: "2026-03-25",
   author: { "@type": "Person", name: "Yiyan" },
-  publisher: { "@type": "Organization", name: "Japan Toolkit", url: "https://japantoolkit.com" },
-  mainEntityOfPage: { "@type": "WebPage", "@id": "https://japantoolkit.com/guides/cash-and-currency-in-japan" },
+  publisher: { "@type": "Organization", name: "Japan Toolkit", url: "https://japantoolkit.cepathosting.com" },
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://japantoolkit.cepathosting.com/guides/cash-and-currency-in-japan" },
 };
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://japantoolkit.com" },
-    { "@type": "ListItem", position: 2, name: "Guides", item: "https://japantoolkit.com/guides" },
-    { "@type": "ListItem", position: 3, name: "Cash & Currency in Japan", item: "https://japantoolkit.com/guides/cash-and-currency-in-japan" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://japantoolkit.cepathosting.com" },
+    { "@type": "ListItem", position: 2, name: "Guides", item: "https://japantoolkit.cepathosting.com/guides" },
+    { "@type": "ListItem", position: 3, name: "Cash & Currency in Japan", item: "https://japantoolkit.cepathosting.com/guides/cash-and-currency-in-japan" },
   ],
 };
 

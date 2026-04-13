@@ -10,13 +10,13 @@ export const metadata: Metadata = {
   title: "Japan Itinerary Ideas by Trip Length and Travel Style",
   description:
     "Browse Japan itinerary templates for first-timers, anime fans, families, solo travelers, and budget trips. Each route has a day-by-day outline built from real travel notes.",
-  alternates: { canonical: "https://japantoolkit.com/itinerary" },
+  alternates: { canonical: "https://japantoolkit.cepathosting.com/itinerary" },
   openGraph: {
     title: "Japan Itinerary Ideas by Trip Length and Travel Style",
     description:
       "Browse Japan itinerary templates for first-timers, anime fans, families, solo travelers, and budget trips. Each route has a day-by-day outline built from real travel notes.",
-    url: "https://japantoolkit.com/itinerary",
-    images: [{ url: "https://japantoolkit.com/opengraph-image", width: 1200, height: 630 }],
+    url: "https://japantoolkit.cepathosting.com/itinerary",
+    images: [{ url: "https://japantoolkit.cepathosting.com/opengraph-image", width: 1200, height: 630 }],
   },
 };
 

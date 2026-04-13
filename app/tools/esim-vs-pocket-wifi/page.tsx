@@ -10,14 +10,14 @@ export const metadata: Metadata = {
   description:
     "Compare eSIM and pocket Wi-Fi for Japan travel. See setup, battery, sharing, and cost differences — then use the quick quiz to pick the right option for your trip.",
   alternates: {
-    canonical: "https://japantoolkit.com/tools/esim-vs-pocket-wifi",
+    canonical: "https://japantoolkit.cepathosting.com/tools/esim-vs-pocket-wifi",
   },
   openGraph: {
     title: "eSIM vs Pocket Wi-Fi Japan — Which Should You Choose?",
     description:
       "Compare eSIM and pocket Wi-Fi for Japan travel. See setup, battery, sharing, and cost differences — then use the quick quiz to pick the right option for your trip.",
-    url: "https://japantoolkit.com/tools/esim-vs-pocket-wifi",
-    images: [{ url: "https://japantoolkit.com/opengraph-image", width: 1200, height: 630 }],
+    url: "https://japantoolkit.cepathosting.com/tools/esim-vs-pocket-wifi",
+    images: [{ url: "https://japantoolkit.cepathosting.com/opengraph-image", width: 1200, height: 630 }],
   },
 };
 
@@ -50,9 +50,9 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://japantoolkit.com" },
-    { "@type": "ListItem", position: 2, name: "Tools", item: "https://japantoolkit.com/tools" },
-    { "@type": "ListItem", position: 3, name: "eSIM vs Pocket Wi-Fi", item: "https://japantoolkit.com/tools/esim-vs-pocket-wifi" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://japantoolkit.cepathosting.com" },
+    { "@type": "ListItem", position: 2, name: "Tools", item: "https://japantoolkit.cepathosting.com/tools" },
+    { "@type": "ListItem", position: 3, name: "eSIM vs Pocket Wi-Fi", item: "https://japantoolkit.cepathosting.com/tools/esim-vs-pocket-wifi" },
   ],
 };
 

@@ -9,13 +9,13 @@ export const metadata: Metadata = {
   title: "Japan Trip Checklist — Everything You Need to Plan Your Trip",
   description:
     "A comprehensive pre-trip checklist for Japan: visas, money, transport cards, phone data, packing, and day-1 prep. Free PDF version available by email.",
-  alternates: { canonical: "https://japantoolkit.com/guides/japan-trip-checklist" },
+  alternates: { canonical: "https://japantoolkit.cepathosting.com/guides/japan-trip-checklist" },
   openGraph: {
     title: "Japan Trip Checklist | Japan Toolkit",
     description:
       "A comprehensive pre-trip checklist for Japan: visas, money, transport cards, phone data, packing, and day-1 prep. Free PDF version available by email.",
-    url: "https://japantoolkit.com/guides/japan-trip-checklist",
-    images: [{ url: "https://japantoolkit.com/opengraph-image", width: 1200, height: 630 }],
+    url: "https://japantoolkit.cepathosting.com/guides/japan-trip-checklist",
+    images: [{ url: "https://japantoolkit.cepathosting.com/opengraph-image", width: 1200, height: 630 }],
   },
 };
 
@@ -28,17 +28,17 @@ const articleSchema = {
   datePublished: "2026-03-25",
   dateModified: "2026-03-25",
   author: { "@type": "Person", name: "Yiyan" },
-  publisher: { "@type": "Organization", name: "Japan Toolkit", url: "https://japantoolkit.com" },
-  mainEntityOfPage: { "@type": "WebPage", "@id": "https://japantoolkit.com/guides/japan-trip-checklist" },
+  publisher: { "@type": "Organization", name: "Japan Toolkit", url: "https://japantoolkit.cepathosting.com" },
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://japantoolkit.cepathosting.com/guides/japan-trip-checklist" },
 };
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://japantoolkit.com" },
-    { "@type": "ListItem", position: 2, name: "Guides", item: "https://japantoolkit.com/guides" },
-    { "@type": "ListItem", position: 3, name: "Japan Trip Checklist", item: "https://japantoolkit.com/guides/japan-trip-checklist" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://japantoolkit.cepathosting.com" },
+    { "@type": "ListItem", position: 2, name: "Guides", item: "https://japantoolkit.cepathosting.com/guides" },
+    { "@type": "ListItem", position: 3, name: "Japan Trip Checklist", item: "https://japantoolkit.cepathosting.com/guides/japan-trip-checklist" },
   ],
 };
 

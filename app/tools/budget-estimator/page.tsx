@@ -8,14 +8,14 @@ export const metadata: Metadata = {
   description:
     "Estimate your Japan trip budget by travel style. Set accommodation type, food spending, transport, activities, and shopping to get a realistic cost range in yen and USD.",
   alternates: {
-    canonical: "https://japantoolkit.com/tools/budget-estimator",
+    canonical: "https://japantoolkit.cepathosting.com/tools/budget-estimator",
   },
   openGraph: {
     title: "Japan Travel Budget Estimator — Plan Your Trip Costs",
     description:
       "Estimate your Japan trip budget by travel style. Set accommodation type, food spending, transport, activities, and shopping to get a realistic cost range in yen and USD.",
-    url: "https://japantoolkit.com/tools/budget-estimator",
-    images: [{ url: "https://japantoolkit.com/opengraph-image", width: 1200, height: 630 }],
+    url: "https://japantoolkit.cepathosting.com/tools/budget-estimator",
+    images: [{ url: "https://japantoolkit.cepathosting.com/opengraph-image", width: 1200, height: 630 }],
   },
 };
 
@@ -48,9 +48,9 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://japantoolkit.com" },
-    { "@type": "ListItem", position: 2, name: "Tools", item: "https://japantoolkit.com/tools" },
-    { "@type": "ListItem", position: 3, name: "Budget Estimator", item: "https://japantoolkit.com/tools/budget-estimator" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://japantoolkit.cepathosting.com" },
+    { "@type": "ListItem", position: 2, name: "Tools", item: "https://japantoolkit.cepathosting.com/tools" },
+    { "@type": "ListItem", position: 3, name: "Budget Estimator", item: "https://japantoolkit.cepathosting.com/tools/budget-estimator" },
   ],
 };
 

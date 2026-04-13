@@ -59,10 +59,10 @@ export function generateMetadata({ params }: ItineraryPageProps): Metadata {
     openGraph: {
       title: itinerary.seoTitle,
       description: itinerary.metaDescription,
-      url: `https://japantoolkit.com/itinerary/${params.slug}`,
+      url: `https://japantoolkit.cepathosting.com/itinerary/${params.slug}`,
       images: [{ url: hero.src, width: 1200, height: 630, alt: hero.alt }],
     },
-    alternates: { canonical: `https://japantoolkit.com/itinerary/${params.slug}` },
+    alternates: { canonical: `https://japantoolkit.cepathosting.com/itinerary/${params.slug}` },
   };
 }
 
@@ -88,7 +88,7 @@ export default function ItineraryDetailPage({ params }: ItineraryPageProps) {
             "provider": {
               "@type": "Organization",
               "name": "Japan Toolkit",
-              "url": "https://japantoolkit.com"
+              "url": "https://japantoolkit.cepathosting.com"
             },
             "itinerary": {
               "@type": "ItemList",
@@ -109,9 +109,9 @@ export default function ItineraryDetailPage({ params }: ItineraryPageProps) {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             "itemListElement": [
-              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://japantoolkit.com" },
-              { "@type": "ListItem", "position": 2, "name": "Itinerary", "item": "https://japantoolkit.com/itinerary" },
-              { "@type": "ListItem", "position": 3, "name": itinerary.title, "item": `https://japantoolkit.com/itinerary/${params.slug}` }
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://japantoolkit.cepathosting.com" },
+              { "@type": "ListItem", "position": 2, "name": "Itinerary", "item": "https://japantoolkit.cepathosting.com/itinerary" },
+              { "@type": "ListItem", "position": 3, "name": itinerary.title, "item": `https://japantoolkit.cepathosting.com/itinerary/${params.slug}` }
             ]
           }),
         }}

@@ -2,7 +2,7 @@ import { itineraryList } from "@/lib/itineraries";
 
 export const siteConfig = {
   name: "Japan Toolkit",
-  url: "https://japantoolkit.com",
+  url: "https://japantoolkit.cepathosting.com",
   description:
     "Practical Japan travel planning tools and itinerary templates for rail passes, connectivity choices, and trip routing.",
 };

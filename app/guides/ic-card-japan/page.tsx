@@ -10,12 +10,12 @@ export const metadata: Metadata = {
   title: "IC Card Japan Guide: Suica vs Pasmo vs ICOCA — Which One Do You Need?",
   description:
     "Everything you need to know about IC cards in Japan: Suica vs Pasmo vs ICOCA, how to get one at the airport, how to top up, deposit and refund rules, and using Mobile Suica on iPhone before you land.",
-  alternates: { canonical: "https://japantoolkit.com/guides/ic-card-japan" },
+  alternates: { canonical: "https://japantoolkit.cepathosting.com/guides/ic-card-japan" },
   openGraph: {
     title: "IC Card Japan Guide: Suica vs Pasmo vs ICOCA | Japan Toolkit",
     description:
       "Everything you need to know about IC cards in Japan: Suica vs Pasmo vs ICOCA, how to get one at the airport, how to top up, deposit and refund rules, and using Mobile Suica on iPhone before you land.",
-    url: "https://japantoolkit.com/guides/ic-card-japan",
+    url: "https://japantoolkit.cepathosting.com/guides/ic-card-japan",
     images: [
       {
         url: "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=80",
@@ -157,17 +157,17 @@ const articleSchema = {
   datePublished: "2026-03-26",
   dateModified: "2026-03-26",
   author: { "@type": "Person", name: "Yiyan" },
-  publisher: { "@type": "Organization", name: "Japan Toolkit", url: "https://japantoolkit.com" },
-  mainEntityOfPage: { "@type": "WebPage", "@id": "https://japantoolkit.com/guides/ic-card-japan" },
+  publisher: { "@type": "Organization", name: "Japan Toolkit", url: "https://japantoolkit.cepathosting.com" },
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://japantoolkit.cepathosting.com/guides/ic-card-japan" },
 };
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://japantoolkit.com" },
-    { "@type": "ListItem", position: 2, name: "Guides", item: "https://japantoolkit.com/guides" },
-    { "@type": "ListItem", position: 3, name: "IC Cards in Japan", item: "https://japantoolkit.com/guides/ic-card-japan" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://japantoolkit.cepathosting.com" },
+    { "@type": "ListItem", position: 2, name: "Guides", item: "https://japantoolkit.cepathosting.com/guides" },
+    { "@type": "ListItem", position: 3, name: "IC Cards in Japan", item: "https://japantoolkit.cepathosting.com/guides/ic-card-japan" },
   ],
 };
 

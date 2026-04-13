@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Privacy Policy — Japan Toolkit",
   description: "Privacy policy for Japan Toolkit.",
-  alternates: { canonical: "https://japantoolkit.com/privacy" },
+  alternates: { canonical: "https://japantoolkit.cepathosting.com/privacy" },
 };
 
 export default function PrivacyPage() {

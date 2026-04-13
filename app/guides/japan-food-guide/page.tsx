@@ -11,12 +11,12 @@ export const metadata: Metadata = {
   title: "Japan Food Guide 2026: Must-Eat Dishes, Where to Find Them & Halal Options",
   description:
     "Everything you need to eat in Japan: ramen, sushi, takoyaki, tempura, and more. Plus halal-friendly restaurants in Tokyo and Osaka for Muslim travellers.",
-  alternates: { canonical: "https://japantoolkit.com/guides/japan-food-guide" },
+  alternates: { canonical: "https://japantoolkit.cepathosting.com/guides/japan-food-guide" },
   openGraph: {
     title: "Japan Food Guide 2026: Must-Eat Dishes, Where to Find Them & Halal Options | Japan Toolkit",
     description:
       "Everything you need to eat in Japan: ramen, sushi, takoyaki, tempura, and more. Plus halal-friendly restaurants in Tokyo and Osaka for Muslim travellers.",
-    url: "https://japantoolkit.com/guides/japan-food-guide",
+    url: "https://japantoolkit.cepathosting.com/guides/japan-food-guide",
     images: [
       {
         url: "https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?w=1200&q=80",
@@ -205,17 +205,17 @@ const articleSchema = {
   datePublished: "2026-03-26",
   dateModified: "2026-03-26",
   author: { "@type": "Person", name: "Yiyan" },
-  publisher: { "@type": "Organization", name: "Japan Toolkit", url: "https://japantoolkit.com" },
-  mainEntityOfPage: { "@type": "WebPage", "@id": "https://japantoolkit.com/guides/japan-food-guide" },
+  publisher: { "@type": "Organization", name: "Japan Toolkit", url: "https://japantoolkit.cepathosting.com" },
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://japantoolkit.cepathosting.com/guides/japan-food-guide" },
 };
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://japantoolkit.com" },
-    { "@type": "ListItem", position: 2, name: "Guides", item: "https://japantoolkit.com/guides" },
-    { "@type": "ListItem", position: 3, name: "Japan Food Guide", item: "https://japantoolkit.com/guides/japan-food-guide" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://japantoolkit.cepathosting.com" },
+    { "@type": "ListItem", position: 2, name: "Guides", item: "https://japantoolkit.cepathosting.com/guides" },
+    { "@type": "ListItem", position: 3, name: "Japan Food Guide", item: "https://japantoolkit.cepathosting.com/guides/japan-food-guide" },
   ],
 };
 

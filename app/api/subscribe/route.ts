@@ -124,7 +124,7 @@ export async function POST(req: NextRequest) {
                   <p style="margin:0 0 16px;font-size:16px;line-height:1.6;color:#222222;text-align:center;">
                     Start with your budget. Use the estimator to get a realistic number before you commit to anything.
                   </p>
-                  <a href="https://japantoolkit.com/tools/budget-estimator" style="display:inline-block;background-color:#C0392B;color:#ffffff;font-size:16px;font-weight:700;text-decoration:none;padding:14px 32px;border-radius:4px;letter-spacing:0.3px;">Calculate Your Japan Budget →</a>
+                  <a href="https://japantoolkit.cepathosting.com/tools/budget-estimator" style="display:inline-block;background-color:#C0392B;color:#ffffff;font-size:16px;font-weight:700;text-decoration:none;padding:14px 32px;border-radius:4px;letter-spacing:0.3px;">Calculate Your Japan Budget →</a>
                 </td>
               </tr>
             </table>
@@ -157,7 +157,7 @@ export async function POST(req: NextRequest) {
         <tr>
           <td style="padding:20px 40px;background-color:#f9f9f9;border-top:1px solid #e8e8e8;">
             <p style="margin:0;font-size:12px;line-height:1.6;color:#999999;text-align:center;">
-              You signed up at japantoolkit.com${source ? ` via ${source}` : ""}.<br>
+              You signed up at Japan Toolkit${source ? ` via ${source}` : ""}.<br>
               To unsubscribe, reply with "unsubscribe" in the subject line.
             </p>
           </td>
@@ -188,7 +188,7 @@ export async function POST(req: NextRequest) {
       "Your flight dates anchor everything. Hotels, passes, reservations — none of it matters until you have flights locked in. This is the order 95% of people get wrong.",
       "",
       "Start with your budget. Use the estimator to get a realistic number before you commit to anything:",
-      "https://japantoolkit.com/tools/budget-estimator",
+      "https://japantoolkit.cepathosting.com/tools/budget-estimator",
       "",
       "---",
       "",
@@ -199,7 +199,7 @@ export async function POST(req: NextRequest) {
       "Yiyan",
       "Japan Toolkit",
       "",
-      `You signed up at japantoolkit.com${source ? ` via ${source}` : ""}.`,
+      `You signed up at Japan Toolkit${source ? ` via ${source}` : ""}.`,
       "To unsubscribe, reply with \"unsubscribe\" in the subject line.",
     ].join("\n");
 

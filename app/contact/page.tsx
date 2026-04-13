@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Contact — Japan Toolkit",
   description: "Get in touch with the Japan Toolkit team.",
-  alternates: { canonical: "https://japantoolkit.com/contact" },
+  alternates: { canonical: "https://japantoolkit.cepathosting.com/contact" },
 };
 
 export default function ContactPage() {
