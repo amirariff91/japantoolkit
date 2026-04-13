@@ -149,6 +149,132 @@ export default function EsimVsPocketWifiPage() {
           </CardContent>
         </Card>
       </section>
+      </section>
+
+      {/* ── Affiliate section ── */}
+      <section className="space-y-6 pt-6 border-t border-stone-200">
+        <div className="rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm text-amber-800">
+          <strong>Affiliate disclosure:</strong> We may earn a commission at no extra cost to you when you book through links on this page.
+          This supports our content and doesn&apos;t affect your price.{' '}
+          <a href="/affiliate-disclaimer" className="underline">Learn more</a>
+        </div>
+
+        <h2 className="text-2xl font-semibold tracking-tight text-stone-900">Our recommended eSIM providers</h2>
+        <p className="text-stone-600 text-sm">
+          For Japan, these eSIMs consistently get the best reviews for coverage, speed, and ease of setup.
+        </p>
+
+        <div className="grid gap-4 md:grid-cols-2">
+          <Card className="border-emerald-200 bg-emerald-50/50">
+            <CardHeader className="pb-2">
+              <div className="flex items-center justify-between">
+                <CardTitle className="text-base">Airalo — Japan eSIM</CardTitle>
+                <Badge className="bg-emerald-600 text-white text-xs">Best overall</Badge>
+              </div>
+              <p className="text-sm text-stone-500 mt-1">From ~$9 USD &middot; 7&ndash;30 days &middot; Unlimited data plans</p>
+            </CardHeader>
+            <CardContent className="space-y-3">
+              <ul className="text-sm text-stone-600 space-y-1">
+                <li>Works in 200+ countries</li>
+                <li>Instant delivery after purchase</li>
+                <li>QR code setup &mdash; no physical SIM needed</li>
+                <li>Multiple plan sizes (3GB to unlimited)</li>
+                <li>24/7 chat support</li>
+              </ul>
+              <a href="https://www.airalo.com/japan-esim?ref=YOUR_AFFILIATE_ID" target="_blank" rel="noopener noreferrer">
+                <Button className="w-full bg-emerald-600 hover:bg-emerald-700 text-white">
+                  View Japan eSIM plans on Airalo &rarr;
+                </Button>
+              </a>
+              <p className="text-xs text-stone-400">We may earn a commission. Prices shown in USD.</p>
+            </CardContent>
+          </Card>
+
+          <Card className="border-blue-200 bg-blue-50/50">
+            <CardHeader className="pb-2">
+              <div className="flex items-center justify-between">
+                <CardTitle className="text-base">Nomad — Japan eSIM</CardTitle>
+                <Badge className="bg-blue-600 text-white text-xs">Great for long trips</Badge>
+              </div>
+              <p className="text-sm text-stone-500 mt-1">From ~$10 USD &middot; 5&ndash;30 days &middot; Flexible data</p>
+            </CardHeader>
+            <CardContent className="space-y-3">
+              <ul className="text-sm text-stone-600 space-y-1">
+                <li>US-based company, reliable support</li>
+                <li>Easy app-based setup (iOS &amp; Android)</li>
+                <li>Plans from 1GB to unlimited</li>
+                <li>Data top-up available mid-trip</li>
+                <li>No expiration on unused data</li>
+              </ul>
+              <a href="https://www.nomad.com/en/destinations/japan/?ref=YOUR_AFFILIATE_ID" target="_blank" rel="noopener noreferrer">
+                <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white">
+                  View Japan eSIM plans on Nomad &rarr;
+                </Button>
+              </a>
+              <p className="text-xs text-stone-400">We may earn a commission.</p>
+            </CardContent>
+          </Card>
+        </div>
+
+        <h2 className="text-2xl font-semibold tracking-tight text-stone-900 pt-4">Our recommended pocket Wi-Fi</h2>
+        <div className="grid gap-4 md:grid-cols-2">
+          <Card className="border-purple-200 bg-purple-50/50">
+            <CardHeader className="pb-2">
+              <div className="flex items-center justify-between">
+                <CardTitle className="text-base">Japan Wireless — Pocket Wi-Fi</CardTitle>
+                <Badge className="bg-purple-600 text-white text-xs">Best for groups</Badge>
+              </div>
+              <p className="text-sm text-stone-500 mt-1">From ~&yen;198/day &middot; Unlimited data &middot; Airport pickup</p>
+            </CardHeader>
+            <CardContent className="space-y-3">
+              <ul className="text-sm text-stone-600 space-y-1">
+                <li>Unlimited data on SoftBank network</li>
+                <li>Up to 10 devices connected simultaneously</li>
+                <li>Airport pickup &amp; drop-off included</li>
+                <li>Courier delivery to your hotel</li>
+                <li>English support available</li>
+              </ul>
+              <a href="https://www.japan-wireless.com/?affiliate=YOUR_AFFILIATE_ID" target="_blank" rel="noopener noreferrer">
+                <Button className="w-full bg-purple-600 hover:bg-purple-700 text-white">
+                  Book pocket Wi-Fi via Japan Wireless &rarr;
+                </Button>
+              </a>
+              <p className="text-xs text-stone-400">We may earn a commission.</p>
+            </CardContent>
+          </Card>
+
+          <Card className="border-sky-200 bg-sky-50/50">
+            <CardHeader className="pb-2">
+              <div className="flex items-center justify-between">
+                <CardTitle className="text-base">Global Pocket Wi-Fi</CardTitle>
+                <Badge className="bg-sky-600 text-white text-xs">Easy advance booking</Badge>
+              </div>
+              <p className="text-sm text-stone-500 mt-1">From ~&yen;180/day &middot; Unlimited &middot; Worldwide coverage</p>
+            </CardHeader>
+            <CardContent className="space-y-3">
+              <ul className="text-sm text-stone-600 space-y-1">
+                <li>Pre-order online before you leave</li>
+                <li>Works in Japan + other countries</li>
+                <li>Delivery to Narita, Haneda, Kansai airports</li>
+                <li>Device rental with unlimited 4G LTE</li>
+                <li>Power bank combo available</li>
+              </ul>
+              <a href="https://www.globalpocketwifi.com/japan/?ref=YOUR_AFFILIATE_ID" target="_blank" rel="noopener noreferrer">
+                <Button className="w-full bg-sky-600 hover:bg-sky-700 text-white">
+                  Book via Global Pocket Wi-Fi &rarr;
+                </Button>
+              </a>
+              <p className="text-xs text-stone-400">We may earn a commission.</p>
+            </CardContent>
+          </Card>
+        </div>
+
+        <p className="text-xs text-stone-400 pt-2 border-t border-stone-100">
+          <strong>Note:</strong> Replace &quot;YOUR_AFFILIATE_ID&quot; with your actual partner IDs from{' '}
+          <strong>Airalo</strong>, <strong>Nomad</strong>, <strong>Japan Wireless</strong>, and <strong>Global Pocket Wi-Fi</strong>.
+          Apply for their affiliate programs to start earning commissions from your traffic.
+        </p>
+      </section>
     </div>
   );
 }
