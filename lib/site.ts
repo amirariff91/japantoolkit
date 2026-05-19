@@ -4,7 +4,7 @@ export const siteConfig = {
   name: "Japan Toolkit",
   url: "https://japantoolkit.cepathosting.com",
   description:
-    "Practical Japan travel planning tools and itinerary templates for rail passes, connectivity choices, and trip routing.",
+    "Japan itinerary planner and trip audit tools for route design, JR Pass decisions, Tokyo hotel bases, budgets, eSIMs, and realistic day-by-day pacing.",
 };
 
 export const tools = [

@@ -64,36 +64,7 @@ const faqSchema = {
       name: "Is the JR Pass worth it?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "The JR Pass is worth it if your long-distance shinkansen costs exceed the pass price within the 7-day validity window. It typically pays off for routes like Tokyo → Kyoto → Hiroshima or multi-city trips across Honshu.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Which Shinkansen are covered, and can I use it on the Nozomi?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Most Shinkansen lines are covered by the JR Pass — but the Nozomi (Tokaido/Sanyo) and Mizuho (Sanyo) require a separate supplement ticket even with an active pass. Use Hikari or Sakura trains at no extra cost. Regional trains, subways, and private railways are not covered.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What routes does the JR Pass cover?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "The JR Pass covers all JR-operated trains nationwide including most Shinkansen, JR local and rapid trains, JR buses on selected routes, and the JR ferry to Miyajima. It does not cover private railways, subway lines, or non-JR buses.",
-      },
-    }
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "The JR Pass covers all JR-operated trains nationwide including most Shinkansen, JR local and rapid trains, JR buses on selected routes, and the JR ferry to Miyajima. It does not cover private railways, subway lines, or non-JR buses.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How much does the JR Pass cost?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "The 7-day ordinary JR Pass currently costs around ¥50,000 (approximately USD 330). The 14-day pass is around ¥80,000 and the 21-day pass around ¥100,000. Check the official JR website or your country's authorized reseller for the latest pricing.",
+        text: "The JR Pass is worth it if your long-distance shinkansen costs exceed the pass price within the active pass window. It usually needs more than a simple Tokyo, Kyoto, and Osaka loop to pay off.",
       },
     },
     {
@@ -101,31 +72,15 @@ const faqSchema = {
       name: "Should I buy the JR Pass or individual train tickets?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Buy individual tickets if your trip is mostly within one region (e.g., just Tokyo and nearby day trips). Buy the JR Pass if you are making 3+ long-distance shinkansen trips across different cities in a week, such as Tokyo → Kyoto → Hiroshima → Tokyo.",
+        text: "Buy individual tickets if your trip is mostly within one region or only uses one return shinkansen route. Consider the JR Pass when you stack several long-distance JR rides in a short window, such as Tokyo to Kyoto to Hiroshima and back east.",
       },
     },
     {
       "@type": "Question",
-      name: "Is the JR Pass valid on all trains in Japan?",
+      name: "Which trains are not fully covered by the JR Pass?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "No. The JR Pass covers JR (Japan Railways) trains only. It does not cover private railways like the Keio Line, Odakyu Line, Hankyu, Kintetsu, or subway lines in Tokyo, Osaka, and Kyoto. It also does not cover most bus companies outside JR.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Can tourists buy the JR Pass?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Only foreign tourists visiting Japan as temporary visitors are eligible. You can purchase an Exchange Order from an authorised reseller online before you travel, or buy directly through the official JR online shop (with some limitations). Exchange your voucher at a JR office at the airport or in major stations.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Can I buy a JR Pass after I arrive in Japan?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. You can purchase a JR Pass after arrival in Japan through the official JR online shop or from resellers within the country, then exchange at a JR office. Prices may differ from overseas rates and some resellers charge a premium for in-Japan purchase.",
+        text: "The Nozomi and Mizuho shinkansen require a supplement even with a JR Pass. Private railways, local subways, most non-JR buses, and many airport or city transit options are also outside the nationwide pass.",
       },
     },
     {
@@ -133,20 +88,7 @@ const faqSchema = {
       name: "How do I activate the JR Pass?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Present your Exchange Order and passport at a JR exchange office (major airports and stations like Tokyo/Kyoto Station). Choose your start date within 30 days — the pass is valid from that date.",
-      },
-    },
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Present your Exchange Order and passport at a JR Pass exchange office (usually found at major airports and train stations like Tokyo Station, Kyoto Station). The JR staff will activate your pass and you will choose a start date within 30 days of exchange. The pass is valid from the start date you choose.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Is a 7-day JR Pass enough for Tokyo, Kyoto, and Osaka?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "For a Tokyo → Kyoto → Osaka → Tokyo triangle with one Shinkansen leg each way, individual tickets are usually cheaper than a 7-day JR Pass. The pass only pays off if you add at least one more long leg (like Hiroshima, Nagano, or a return trip to Tokyo from Kansai).",
+        text: "Exchange your voucher or online order with your passport at a JR exchange office, then choose the pass start date. The pass validity begins on the start date you select.",
       },
     },
   ],

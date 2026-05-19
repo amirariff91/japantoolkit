@@ -132,11 +132,6 @@ const faqSchema = {
         text: "Yes. Once you scan the QR code and activate the eSIM plan (usually takes 5 minutes), it works immediately on arrival. There is no need to wait for a physical SIM or find a rental counter.",
       },
     },
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. Once you scan the QR code and activate the eSIM plan (usually takes 5 minutes), it works immediately on arrival. There is no need to wait for a physical SIM or find a rental counter.",
-      },
-    },
     {
       "@type": "Question",
       name: "How much does eSIM data cost for Japan?",

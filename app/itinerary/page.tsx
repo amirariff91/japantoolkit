@@ -7,9 +7,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { itineraryList } from "@/lib/itineraries";
 
 export const metadata: Metadata = {
-  title: "Japan Itinerary Ideas by Trip Length and Travel Style",
+  title: "Japan Itinerary Ideas: 7, 10, 14 and 21 Day Routes",
   description:
-    "Browse Japan itinerary templates for first-timers, anime fans, families, solo travelers, and budget trips. Each route has a day-by-day outline built from real travel notes.",
+    "Browse Japan itinerary templates for first-timers, families, solo travelers, anime fans, budget trips, cherry blossom season, and two-week classic routes.",
   alternates: { canonical: "https://japantoolkit.cepathosting.com/itinerary" },
   openGraph: {
     title: "Japan Itinerary Ideas by Trip Length and Travel Style",
