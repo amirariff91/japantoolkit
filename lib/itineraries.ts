@@ -313,6 +313,94 @@ export const itineraryList: Itinerary[] = [
       { day: 7, title: "Departure", description: "Use your final morning however the trip feels like it should end: coffee, shopping, or one last walk." },
     ],
   },
+  {
+    slug: "10-days-first-time",
+    title: "10 Days in Japan for First-Time Visitors",
+    seoTitle: "10 Days in Japan Itinerary for First-Time Visitors",
+    metaDescription:
+      "Plan a 10-day Japan itinerary across Tokyo, Hakone, Kyoto, Nara, and Osaka with realistic pacing for first-time visitors.",
+    durationLabel: "10 Days",
+    intro:
+      "Ten days is the first-time sweet spot: enough time for Tokyo, Kyoto, Osaka, and one reset without turning every transfer into a race. This route keeps the classic highlights but adds breathing room where seven-day trips usually break.",
+    highlights: ["Tokyo split into east and west days", "Hakone as an onsen and mountain reset", "Kyoto, Nara, and Osaka without daily hotel churn"],
+    attractionDescriptions: [
+      "Separating Tokyo by area reduces cross-city fatigue and makes evenings easier.",
+      "Hakone works best as a one-night reset, not a rushed day trip between cities.",
+      "Kansai gets enough time for temples, deer park, and food without forcing everything into one day.",
+    ],
+    days: [
+      { day: 1, title: "Arrive in Tokyo", description: "Settle near a major station and keep the first evening light." },
+      { day: 2, title: "Asakusa, Ueno, and east Tokyo", description: "Use one side of the city for temples, museums, old streets, and an easier dinner." },
+      { day: 3, title: "Shibuya, Harajuku, and Shinjuku", description: "Group the west-side icons into one day and save a night view for after dark." },
+      { day: 4, title: "Tokyo flex day", description: "Use this for Disney, teamLab, shopping, or a neighborhood that matches your interests." },
+      { day: 5, title: "Hakone overnight", description: "Forward luggage if useful, ride toward Hakone, and prioritize onsen time over checklist speed." },
+      { day: 6, title: "Hakone to Kyoto", description: "Finish the Hakone loop if weather allows, then travel to Kyoto for a simple evening." },
+      { day: 7, title: "Kyoto east side", description: "Focus on Higashiyama, Kiyomizu-dera, Gion, and one slower tea or cafe stop." },
+      { day: 8, title: "Arashiyama or Fushimi Inari", description: "Pick one early-start highlight, then avoid overloading the afternoon." },
+      { day: 9, title: "Nara and Osaka", description: "Day-trip to Nara, then shift into Osaka for Dotonbori and an easier final base." },
+      { day: 10, title: "Departure or final Osaka morning", description: "Use the last morning for Kuromon, Umeda, airport transfer, or one final food stop." },
+    ],
+  },
+  {
+    slug: "14-days-family",
+    title: "14 Days in Japan for Families",
+    seoTitle: "14 Days in Japan Family Itinerary",
+    metaDescription:
+      "Use this 14-day Japan family itinerary with Tokyo, Kyoto, Osaka, Nara, Disney or USJ options, and kid-friendly pacing.",
+    durationLabel: "14 Days",
+    intro:
+      "A two-week family route should feel like a holiday, not a logistics drill. This version uses fewer bases, one main anchor per day, and flexible park or character days so kids and adults both survive the itinerary.",
+    highlights: ["Fewer hotel changes and station-connected bases", "Disney or USJ options without crushing the next day", "Kyoto and Nara paced around snacks, rests, and early nights"],
+    attractionDescriptions: [
+      "Station-connected hotels make luggage, naps, and bad weather easier to manage.",
+      "Theme parks need buffer days because late nights and queues affect the next morning.",
+      "Kyoto is better for families when each day has one scenic anchor rather than five temples.",
+    ],
+    days: [
+      { day: 1, title: "Arrive in Tokyo", description: "Check in, eat nearby, and do not plan a serious sightseeing day." },
+      { day: 2, title: "Easy Tokyo highlights", description: "Pick Asakusa, Ueno, or Skytree with a park or department-store food hall." },
+      { day: 3, title: "West Tokyo", description: "Use Harajuku, Meiji Jingu, Shibuya, and an early dinner in one linked route." },
+      { day: 4, title: "Disney or character day", description: "Choose Tokyo Disney Resort, Ghibli if ticketed, or a lighter character-store day." },
+      { day: 5, title: "Tokyo recovery and shopping", description: "Keep the day flexible after a park or late night." },
+      { day: 6, title: "Travel to Kyoto", description: "Ride the shinkansen after breakfast and keep the Kyoto evening simple." },
+      { day: 7, title: "Kyoto scenic day", description: "Use one compact area such as Arashiyama or Higashiyama, not both." },
+      { day: 8, title: "Nara day trip", description: "See Todai-ji and Nara Park, then return before the evening gets too late." },
+      { day: 9, title: "Kyoto flex day", description: "Reserve this for weather, laundry, cafes, crafts, or a slower Fushimi Inari visit." },
+      { day: 10, title: "Move to Osaka", description: "Shift bases and use Dotonbori or Umeda for an easy food-focused night." },
+      { day: 11, title: "USJ or Osaka Aquarium", description: "Choose one major family attraction instead of stacking several." },
+      { day: 12, title: "Osaka recovery day", description: "Use markets, shopping streets, and low-pressure sightseeing." },
+      { day: 13, title: "Final city choice", description: "Add Kobe, Himeji, or a repeat favorite depending on energy." },
+      { day: 14, title: "Departure", description: "Keep luggage routing and airport transfer as simple as possible." },
+    ],
+  },
+  {
+    slug: "cherry-blossom-route",
+    title: "Japan Cherry Blossom Route for First-Timers",
+    seoTitle: "Japan Cherry Blossom Itinerary Route for First-Timers",
+    metaDescription:
+      "Plan a cherry blossom Japan itinerary with Tokyo, Kyoto, Osaka, and flexible bloom-chasing days for first-time visitors.",
+    durationLabel: "Seasonal",
+    intro:
+      "Cherry blossom trips need flexibility more than certainty. This route uses the classic Tokyo-to-Kansai spine, then builds in bloom-chasing buffer days so you can adjust around forecasts instead of betting the whole trip on one park.",
+    highlights: ["Tokyo hanami parks with backup neighborhoods", "Kyoto bloom spots grouped by area", "Flexible Kansai day for Nara, Osaka, or Himeji"],
+    attractionDescriptions: [
+      "Tokyo bloom timing varies by year, so pair famous parks with neighborhood walks and evening options.",
+      "Kyoto is easier when blossom spots are grouped by district rather than scattered across bus routes.",
+      "Kansai gives you several backup directions if one city peaks earlier or later than expected.",
+    ],
+    days: [
+      { day: 1, title: "Arrive in Tokyo", description: "Settle in and check the latest bloom forecast before locking the next two days." },
+      { day: 2, title: "Tokyo hanami day", description: "Use Ueno, Chidorigafuchi, Shinjuku Gyoen, or Meguro depending on conditions." },
+      { day: 3, title: "Tokyo backup blooms", description: "Choose a second area or a day trip if the city is early or late." },
+      { day: 4, title: "Travel to Kyoto", description: "Move west and use the evening for Gion, Kiyamachi, or Maruyama Park." },
+      { day: 5, title: "Kyoto east side blossoms", description: "Focus on Philosopher's Path, Nanzen-ji, and nearby temple streets." },
+      { day: 6, title: "Arashiyama or Fushimi Inari", description: "Pick the better seasonal fit and avoid chasing too many distant spots." },
+      { day: 7, title: "Nara or Osaka", description: "Use this flexible day where forecasts and crowds look best." },
+      { day: 8, title: "Himeji or Osaka Castle", description: "Choose a castle blossom scene if timing lines up." },
+      { day: 9, title: "Return or reposition", description: "Move toward your departure airport with buffer time." },
+      { day: 10, title: "Departure", description: "Keep the final day light because blossom season crowds can slow everything down." },
+    ],
+  },
 ];
 
 export function getItineraryBySlug(slug: string) {

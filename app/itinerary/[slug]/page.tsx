@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { getItineraryBySlug, itineraryList } from "@/lib/itineraries";
+import { siteConfig } from "@/lib/site";
 
 type ItineraryPageProps = {
   params: {
@@ -59,10 +60,10 @@ export function generateMetadata({ params }: ItineraryPageProps): Metadata {
     openGraph: {
       title: itinerary.seoTitle,
       description: itinerary.metaDescription,
-      url: `https://japantoolkit.cepathosting.com/itinerary/${params.slug}`,
+      url: `${siteConfig.url}/itinerary/${params.slug}`,
       images: [{ url: hero.src, width: 1200, height: 630, alt: hero.alt }],
     },
-    alternates: { canonical: `https://japantoolkit.cepathosting.com/itinerary/${params.slug}` },
+    alternates: { canonical: `${siteConfig.url}/itinerary/${params.slug}` },
   };
 }
 
@@ -88,15 +89,16 @@ export default function ItineraryDetailPage({ params }: ItineraryPageProps) {
             "provider": {
               "@type": "Organization",
               "name": "Japan Toolkit",
-              "url": "https://japantoolkit.cepathosting.com"
+              "url": siteConfig.url
             },
             "itinerary": {
               "@type": "ItemList",
-              "numberOfItems": itinerary.highlights.length,
-              "itemListElement": itinerary.highlights.map((h, i) => ({
+              "numberOfItems": itinerary.days.length,
+              "itemListElement": itinerary.days.map((day) => ({
                 "@type": "ListItem",
-                "position": i + 1,
-                "name": h
+                "position": day.day,
+                "name": day.title,
+                "description": day.description
               }))
             }
           }),
@@ -109,9 +111,9 @@ export default function ItineraryDetailPage({ params }: ItineraryPageProps) {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             "itemListElement": [
-              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://japantoolkit.cepathosting.com" },
-              { "@type": "ListItem", "position": 2, "name": "Itinerary", "item": "https://japantoolkit.cepathosting.com/itinerary" },
-              { "@type": "ListItem", "position": 3, "name": itinerary.title, "item": `https://japantoolkit.cepathosting.com/itinerary/${params.slug}` }
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": siteConfig.url },
+              { "@type": "ListItem", "position": 2, "name": "Itinerary", "item": `${siteConfig.url}/itinerary` },
+              { "@type": "ListItem", "position": 3, "name": itinerary.title, "item": `${siteConfig.url}/itinerary/${params.slug}` }
             ]
           }),
         }}
